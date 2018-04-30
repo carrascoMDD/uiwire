@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JasperReportTemplate" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="89e21ef5-5982-40b4-a415-3b7f41a0de50">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="backgroundRows" mode="Opaque" forecolor="#000000" backcolor="#F7F7F7" fill="Solid" vAlign="Bottom" fontName="SansSerif" fontSize="8" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue() % 2 == 0)]]></conditionExpression>
+			<style backcolor="#E6E6EA"/>
+		</conditionalStyle>
+	</style>
+	<style name="columHeader" forecolor="#616D9F" backcolor="#FFFFFF" fill="Solid" hAlign="Left" vAlign="Bottom" fontName="SansSerif" fontSize="11" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<pen lineColor="#727276"/>
+		<box>
+			<pen lineColor="#727276"/>
+			<topPen lineColor="#727276"/>
+			<leftPen lineColor="#727276"/>
+			<bottomPen lineColor="#727276"/>
+			<rightPen lineColor="#727276"/>
+		</box>
+	</style>
+	<style name="titPage" forecolor="#616D9F" backcolor="#FFFFFF" hAlign="Right" vAlign="Bottom" fontName="SansSerif" fontSize="18" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<box>
+			<pen lineColor="#616D9F"/>
+			<topPen lineColor="#616D9F"/>
+			<leftPen lineColor="#616D9F"/>
+			<bottomPen lineColor="#616D9F"/>
+			<rightPen lineColor="#616D9F"/>
+		</box>
+	</style>
+	<style name="lineHeaderTable" forecolor="#727276" fontName="SansSerif" fontSize="11">
+		<pen lineWidth="0.75" lineColor="#727276"/>
+		<box>
+			<pen lineColor="#727276"/>
+			<topPen lineColor="#727276"/>
+			<leftPen lineColor="#727276"/>
+			<bottomPen lineColor="#727276"/>
+			<rightPen lineColor="#727276"/>
+		</box>
+	</style>
+	<style name="strong" fontName="SansSerif" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<parameter name="criterio" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="nombreProvinciaFichero" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="anoFichero" class="java.lang.Integer" isForPrompting="false"/>
+	<parameter name="mesFichero" class="java.lang.Integer" isForPrompting="false"/>
+	<parameter name="fechaInforme" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="numFallos" class="java.lang.Integer" isForPrompting="false"/>
+	<field name="nbol" class="java.lang.String"/>
+	<field name="idBoletin" class="java.lang.Integer"/>	
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<image>
+				<reportElement style="titPage" mode="Transparent" x="7" y="0" width="75" height="59" uuid="22b141d5-1a36-401a-8e92-9f21ac4a713a"/>
+				<imageExpression><![CDATA["jasper_images/SpringNut75.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="titPage" mode="Opaque" x="183" y="2" width="172" height="47" uuid="cee00f68-ec33-42ba-a6d0-a196133286b9"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ejemplo de instrumentacion SpringNut]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="columHeader" mode="Opaque" x="399" y="28" width="147" height="20" uuid="d58d7d1c-4948-4adf-8bce-74d28e6b6e8f"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Listado de Errores]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement style="columHeader" x="2" y="3" width="100" height="17" uuid="8cdc8bc2-e7b0-46bf-9313-e1e494ded291"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{criterio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="strong" x="149" y="3" width="64" height="17" uuid="ff559d4a-8ab4-49da-9c60-c2ae2b2ed44c"/>
+				<textElement textAlignment="Left" markup="none">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fichero]]></text>
+			</staticText>		
+			<textField>
+				<reportElement style="strong" x="213" y="0" width="100" height="20" uuid="6248a342-ff4d-41df-a25e-b87648a94989"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombreProvinciaFichero}]]></textFieldExpression>
+			</textField>				
+			<textField>
+				<reportElement style="strong" x="340" y="0" width="17" height="20" uuid="13133cff-a2ca-4b45-8c3b-4f62a2722a09"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mesFichero}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="strong" x="357" y="0" width="18" height="20" uuid="030d0fdc-205b-4a7c-b5d7-3f1893edc2cd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="strong" x="375" y="0" width="61" height="20" uuid="0c4e3961-6aed-499f-9192-ab706f1de99f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{anoFichero}]]></textFieldExpression>
+			</textField>			
+			<textField>
+				<reportElement x="405" y="0" width="150" height="20" uuid="faacf37d-70f4-4d41-88c1-c0fe0ac2f78e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fechaInforme}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement style="lineHeaderTable" x="2" y="24" width="548" height="1" uuid="b61052cd-0237-4147-8867-8167122e0191"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch" />
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement style="strong" x="0" y="0" width="64" height="20" uuid="030d0fdc-205b-4a7c-b5d7-3f1893edc2cc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Identifica:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="strong" x="70" y="0" width="100" height="20" uuid="6248a342-ff4d-41df-a25e-b87648a94986"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nbol}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement style="lineHeaderTable" x="2" y="24" width="548" height="1" uuid="b61052cd-0237-4147-8867-8167122e0199"/>
+			</line>			
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20">
+			<line>
+				<reportElement x="2" y="0" width="548" height="1" uuid="2d65eeb8-3f31-4f96-974d-a48bab5f2a8e"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="2" y="0" width="100" height="20" uuid="752e7b2c-4721-40aa-a0e1-8e2b5219cbfc"/>
+				<textFieldExpression><![CDATA[$P{fechaInforme}]]></textFieldExpression>
+			</textField>			
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="513" y="0" width="42" height="20" uuid="2385da45-d922-4c83-bc41-cf5958150257"/>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="420" y="0" width="93" height="20" uuid="c82ced67-86a1-4a92-b39b-fd727c10eb4a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

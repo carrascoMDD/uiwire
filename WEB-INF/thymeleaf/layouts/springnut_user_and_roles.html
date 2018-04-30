@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+	<!-- ************************************
+		springnut_user_and_roles.html
+		Created 201505271643
+
+Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Utiliza uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+ 		-->
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body layout:fragment="springnut_user_and_roles_fragment">
+
+	<div style="color: white; padding-top: 4px; display: inline-block; vertical-align: top; margin-right: 12px; text-align: right;" >
+		<a th:href="@{/resources/j_spring_security_logout}" >
+			<span style="color: red; font-size: 10px">DESCONECTAR</span>
+			<i class="icon-power-off icon-white" style="color: red"></i>
+		</a>
+		<br/>
+
+		<span id="did_AuthenticationPrincipalName" style="font-weight: bold; font-size: 14px; text-align: right"  th:text="${#authentication.principal}" />
+		<div th:remove="tag" class="user" th:each="authenticationAuthority,iteracionAuthenticationAuthority : ${#authentication.authorities}" >
+			<br/>
+			<span style="font-weight: normal; font-size: 10px; text-align: right; text-transform: lowercase" th:text="${authenticationAuthority}"></span>
+		</div>
+
+	</div>
+
+</body>
+</html>

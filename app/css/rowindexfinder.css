@@ -1,0 +1,111 @@
+/*
+*
+* rowindexfinder.css
+*
+* Creado @author Antonio Carrasco Valero 201411031901
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+*
+*/
+
+div.RowIndexFinder_Container_Shown {
+    display: block;
+    width: 100%;
+    margin-top:    18px;
+    margin-bottom: 18px;
+}
+
+
+div.RowIndexFinder_Container_Hidden {
+    display: none;
+}
+
+div.RowIndexFinder_Criteria {
+    display: block;
+    width: 100%;
+    height: 48px;
+    line-height: 12px;
+    color:black;
+    font-weight: bold;
+    font-size:10px;
+    text-align: left;
+}
+
+span.RowIndexFinder_Label {
+    display: inline-block;
+    width: 100%;
+    height: 16px;
+    line-height: 12px;
+    color:black;
+    font-weight: bold;
+    font-size:10px;
+    text-align: left;
+
+    position: absolute;
+    left: 10px;
+}
+
+
+span.RowIndexFinder_Criteria {
+    display: inline-block;
+    width: 100%;
+    height: 48px;
+    line-height: 12px;
+    color:black;
+    font-weight: bold;
+    font-size:10px;
+    text-align: left;
+
+    position: absolute;
+    left: 64px;
+}
+
+
+
+div.RowIndexFinder_Result {
+    display: block;
+    width: 100%;
+    height: 18px;
+    line-height: 12px;
+    color:black;
+    font-weight: bold;
+    font-size:10px;
+    text-align: left;
+}
+
+span.RowIndexFinder_Result {
+    display: inline-block;
+    width: 100%;
+    height: 18px;
+    line-height: 12px;
+    color:black;
+    font-weight: bold;
+    font-size:10px;
+    text-align: left;
+
+    position: absolute;
+    left: 64px;
+}
+

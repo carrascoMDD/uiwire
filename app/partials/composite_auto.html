@@ -1,0 +1,201 @@
+<!--
+*
+* composite-auto.html
+*
+* Creado @author Antonio Carrasco Valero 201410211840
+*
+***************************************************************************
+
+Copyright 2014 2015 2016 Antonio Carrasco Valero
+uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+* -->
+
+
+<div class="tabPanel ui-tabs ui-widget ui-widget-content ui-corner-all"
+     id="{{compositeCtrl._v_TabsTopCtrl._v_TabsBarDomId}}" >
+
+
+    <!-- Tabs BEGIN -->
+    <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" >
+        <li
+            x-ng-repeat="aTabsBarEntry in compositeCtrl._v_TabsTopCtrl._v_TabsBarEntries"
+            x-ng-class="compositeCtrl._v_TabsTopCtrl.fTabClass( aTabsBarEntry.value)"
+            x-ng-click="compositeCtrl._v_TabsTopCtrl.pSelectTab( aTabsBarEntry.value)">
+
+            <a href="javascript:void(0)"
+               id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_Link"
+               x-ng-click="compositeCtrl._v_TabsTopCtrl.pSelectTab( aTabsBarEntry.value)">
+                {{aTabsBarEntry.label}}
+            </a>
+        </li>
+    </ul>
+    <!-- Tabs END -->
+
+
+
+    <!-- Tabs Panels BEGIN -->
+    <div  x-ng-repeat="aTabsBarEntry in compositeCtrl._v_TabsTopCtrl._v_TabsBarEntries"
+          class="MDD_TabContent border_tab"
+          x-ng-show="compositeCtrl._v_TabsTopCtrl._v_TabsFixed[ aTabsBarEntry.value] || ( compositeCtrl._v_TabsTopCtrl._v_SelectedTab == aTabsBarEntry.value)"
+          id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}">
+
+
+        <!-- Tab Panel BEGIN {{aTabsBarEntry.value}} -->
+
+        <div x-ng-if="aTabsBarEntry.static"
+             x-ng-include="'partials/static_auto.html'"></div>
+
+
+        <div
+                x-ng-if="!aTabsBarEntry.static && aTabsBarEntry.editorName"
+                x-ng-controller="EditorCtrl">
+            <!-- Tab Panel with Grid BEGIN {{aTabsBarEntry.value}} -->
+
+            <div
+                    x-ng-if="aTabsBarEntry.argumentsName"
+                    id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_Arguments_{{aTabsBarEntry.argumentsName}}_div">
+                <!-- Arguments BEGIN {{aTabsBarEntry.value}}  {{aTabsBarEntry.argumentsName}}  -->
+                <div
+                        x-ng-controller="ArgumentsCtrl"
+                        x-ng-init="argumentsCtrl.pRegisterArgumentsInParent( compositeCtrl, aTabsBarEntry.argumentsName)"
+                        x-ng-include="'partials/arguments_auto.html'"
+                        class="cssSpringnut_ArgumentsContainer cssSpringnut_BgColor_LightBlue cssSpringnut_BorderColor_VeryDarkGray "></div>
+
+                <!-- Arguments END {{aTabsBarEntry.value}}  {{aTabsBarEntry.argumentsName}}  -->
+            </div>
+
+
+
+            <div
+                    x-ng-if="aTabsBarEntry.selectorGridName"
+                    id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_Selector_{{aTabsBarEntry.selectorGridName}}_div">
+                <!-- Grid Selector BEGIN {{aTabsBarEntry.value}}  {{aTabsBarEntry.selectorGridName}} -->
+                <div
+                        x-ng-controller="SelectorCtrl"
+                        x-ng-init="selectorCtrl.pRegisterSelectorInParent( compositeCtrl, aTabsBarEntry.selectorGridName)"
+                        x-ng-include="'partials/selector_auto.html'"
+                        class="cssSpringnut_SelectorContainer cssSpringnut_BgColor_LightBlue cssSpringnut_BorderColor_VeryDarkGray "></div>
+
+                <!-- Grid Selector END {{aTabsBarEntry.value}}   {{aTabsBarEntry.selectorGridName}}  -->
+            </div>
+
+
+
+            <div
+                    x-ng-if="!aTabsBarEntry.selectorGridName"
+                    x-ng-include="'partials/editorwogridheader_woselector_auto.html'"></div>
+
+            <div
+                    x-ng-if="aTabsBarEntry.selectorGridName"
+                    x-ng-include="'partials/editorwogridheader_withselector_auto.html'"></div>
+
+
+            <div id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_div">
+
+                <div x-ng-include="'partials/editor_auto.html'"
+                     x-ng-init="editorCtrl.pRegisterEditorInParent( compositeCtrl, aTabsBarEntry.editorName)"></div>
+
+                <!-- Grid Editor and Creator END {{aTabsBarEntry.value}} -->
+            </div>
+
+            <!-- Tab Panel with Grid END {{aTabsBarEntry.value}} -->
+
+        </div>
+
+        <div
+             x-ng-if="!aTabsBarEntry.static && !aTabsBarEntry.editorName"
+             x-ng-controller="GridCtrl">
+
+            <!-- Tab Panel with Grid BEGIN {{aTabsBarEntry.value}} -->
+
+            <div
+                    x-ng-if="aTabsBarEntry.argumentsName"
+                    id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_Arguments_{{aTabsBarEntry.argumentsName}}_div">
+                <!-- Arguments BEGIN {{aTabsBarEntry.value}}  {{aTabsBarEntry.argumentsName}}  -->
+                <div
+                        x-ng-controller="ArgumentsCtrl"
+                        x-ng-init="argumentsCtrl.pRegisterArgumentsInParent( compositeCtrl, aTabsBarEntry.argumentsName)"
+                        x-ng-include="'partials/arguments_auto.html'"
+                        class="cssSpringnut_ArgumentsContainer cssSpringnut_BgColor_LightBlue cssSpringnut_BorderColor_VeryDarkGray "></div>
+
+                <!-- Arguments END {{aTabsBarEntry.value}}  {{aTabsBarEntry.argumentsName}}  -->
+            </div>
+
+
+
+            <div
+                x-ng-if="aTabsBarEntry.selectorGridName"
+                id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_Selector_{{aTabsBarEntry.selectorGridName}}_div">
+                <!-- Grid Selector BEGIN {{aTabsBarEntry.value}}  {{aTabsBarEntry.selectorGridName}} -->
+                <div
+                    x-ng-controller="SelectorCtrl"
+                    x-ng-init="selectorCtrl.pRegisterSelectorInParent( compositeCtrl, aTabsBarEntry.selectorGridName)"
+                    x-ng-include="'partials/selector_auto.html'"
+                    class="cssSpringnut_SelectorContainer cssSpringnut_BgColor_LightBlue cssSpringnut_BorderColor_VeryDarkGray "></div>
+
+                <!-- Grid Selector END {{aTabsBarEntry.value}}   {{aTabsBarEntry.selectorGridName}}  -->
+            </div>
+
+
+
+            <div
+                x-ng-if="!aTabsBarEntry.selectorGridName"
+                x-ng-include="'partials/compositeheader_woselector_auto.html'"></div>
+
+            <div
+                x-ng-if="aTabsBarEntry.selectorGridName"
+                x-ng-include="'partials/compositeheader_withselector_auto.html'"></div>
+
+
+            <div id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_div">
+
+                <!-- Grid Editor and Creator BEGIN {{aTabsBarEntry.value}} -->
+
+                <div x-ng-include="'partials/grid_auto.html'"
+                    x-ng-init="gridCtrl.pRegisterGridInParent( compositeCtrl, aTabsBarEntry.value)"></div>
+
+                <div x-ng-if="gridCtrl._v_EditorName"
+                     x-ng-include="'partials/editor_auto.html'"
+                     x-ng-controller="EditorCtrl"
+                     x-ng-init="editorCtrl.pRegisterEditorInParent( compositeCtrl, gridCtrl._v_EditorName)"></div>
+
+
+                <div x-ng-if="gridCtrl._v_CreatorName"
+                     x-ng-include="'partials/creator_auto.html'"
+                     x-ng-controller="CreatorCtrl"
+                     x-ng-init="creatorCtrl.pRegisterCreatorInParent( compositeCtrl, gridCtrl._v_CreatorName)"></div>
+
+                <!-- Grid Editor and Creator END {{aTabsBarEntry.value}} -->
+            </div>
+
+            <!-- Tab Panel with Grid END {{aTabsBarEntry.value}} -->
+
+        </div>
+
+        <!-- Tab Panel END {{aTabsBarEntry.value}} -->
+
+    </div>
+    <!-- Tabs Panels END -->
+
+</div>
+<br/>

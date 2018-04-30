@@ -1,0 +1,292 @@
+/*
+*
+* columns_edivalidaciones_springnut.css
+*
+* Creado @author Antonio Carrasco Valero 201410111522
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Utiliza uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+ Licensed under the EUPL, Version 1.1 only (the "Licence"); You may not use this work except in compliance with the Licence. You may obtain a copy of the Licence at: https://joinup.ec.europa.eu/software/page/eupl/licence-eupl Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+*
+*/
+
+
+
+
+
+td.cssSpringnut_Validaciones_fase,
+th.cssSpringnut_Validaciones_fase {
+    width: 48px;
+    min-width: 48px;
+    max-width: 48px;
+    text-align: left;
+}
+
+td.cssSpringnut_Validaciones_crnombre,
+th.cssSpringnut_Validaciones_crnombre {
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    text-align: left;
+}
+
+td.cssSpringnut_Validaciones_iderror,
+th.cssSpringnut_Validaciones_iderror  {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: left;
+}
+
+td.cssSpringnut_Validaciones_descripcion,
+th.cssSpringnut_Validaciones_descripcion {
+    width: 100%;
+    text-align: left;
+}
+
+td.cssSpringnut_Validaciones_severidad,
+th.cssSpringnut_Validaciones_severidad {
+    width: 52px;
+    min-width: 52px;
+    max-width: 52px;
+    text-align: left;
+}
+
+td.cssSpringnut_Validaciones_activa,
+th.cssSpringnut_Validaciones_activa {
+    width: 36px;
+    min-width: 36px;
+    max-width: 36px;
+    text-align: left;
+}
+
+
+
+
+
+td.cssSpringnut_Condiciones_fase,
+th.cssSpringnut_Condiciones_fase {
+    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    text-align: left;
+}
+
+td.cssSpringnut_Condiciones_crnombre,
+th.cssSpringnut_Condiciones_crnombre {
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Condiciones_iderror,
+th.cssSpringnut_Condiciones_iderror  {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: left;
+}
+
+td.cssSpringnut_Condiciones_idcondicion,
+th.cssSpringnut_Condiciones_idcondicion  {
+    width: 72px;
+    min-width: 72px;
+    max-width: 72px;
+    text-align: left;
+}
+
+td.cssSpringnut_Condiciones_cnCorrecta,
+th.cssSpringnut_Condiciones_cnCorrecta  {
+    width: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    text-align: left;
+}
+
+td.cssSpringnut_Condiciones_condicion,
+th.cssSpringnut_Condiciones_condicion  {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Condiciones_campos,
+th.cssSpringnut_Condiciones_campos  {
+    width: 30%;
+    min-width: 30%;
+    max-width: 30%;
+    text-align: left;
+}
+
+td.cssSpringnut_Condiciones_idlista,
+th.cssSpringnut_Condiciones_idlista  {
+    width: 62px;
+    min-width: 62px;
+    max-width: 62px;
+    text-align: left;
+}
+
+td.cssSpringnut_Condiciones_descripcionlista,
+th.cssSpringnut_Condiciones_descripcionlista  {
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    text-align: left;
+}
+
+td.cssSpringnut_Condiciones_cnErrorsintaxis,
+th.cssSpringnut_Condiciones_cnErrorsintaxis  {
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_CodigosCie10_idlista,
+th.cssSpringnut_CodigosCie10_idlista  {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_CodigosCie10_idcodigodelista,
+th.cssSpringnut_CodigosCie10_idcodigodelista  {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_CodigosCie10_idcie10,
+th.cssSpringnut_CodigosCie10_idcie10  {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_CodigosCie10_c10Titulo,
+th.cssSpringnut_CodigosCie10_c10Titulo  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_CodigosCie10_idlesi,
+th.cssSpringnut_CodigosCie10_idlesi  {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_CodigosCie10_idmorbi,
+th.cssSpringnut_CodigosCie10_idmorbi  {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+td.cssSpringnut_Criterios_crId,
+th.cssSpringnut_Criterios_crId  {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Criterios_crNombre,
+th.cssSpringnut_Criterios_crNombre  {
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Criterios_crDescripcion,
+th.cssSpringnut_Criterios_crDescripcion  {
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+    text-align: left;
+}
+
+
+
+
+
+td.cssSpringnut_ListasCodigos_idlista,
+th.cssSpringnut_ListasCodigos_idlista  {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_ListasCodigos_descripcion,
+th.cssSpringnut_ListasCodigos_descripcion  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+
+
+td.cssSpringnut_SimbolosPermitidos_tipoSimbolo,
+th.cssSpringnut_SimbolosPermitidos_tipoSimbolo  {
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_SimbolosPermitidos_simbolo,
+th.cssSpringnut_SimbolosPermitidos_simbolo  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+
+
+
+

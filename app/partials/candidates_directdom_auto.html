@@ -1,0 +1,148 @@
+<!--
+*
+* candidates_auto.html
+*
+* Creado @author Antonio Carrasco Valero 201410030747
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+*
+* -->
+
+
+
+<!-- Candidates BEGIN -->
+
+<div x-ng-if="candidatesCtrl.fIsCandidatesRendered()">
+
+
+    <div class="cssSpringnut_Progress cssSpringnut_Progress_Candidates"
+         x-ng-if="candidatesCtrl._v_Leyendo">
+        ...Leyendo ...
+    </div>
+
+    <div class="cssSpringnut_Progress cssSpringnut_Progress_Candidates"
+         x-ng-if="candidatesCtrl._v_Rows && candidatesCtrl._v_Rows.length && !( candidatesCtrl._v_CellValuesCache && candidatesCtrl._v_CellValuesCache.length)">
+        ...Cargando ...
+    </div>
+
+    <div class="cssSpringnut_Progress cssSpringnut_Progress_Candidates"
+         x-ng-if="!( candidatesCtrl._v_Rows && candidatesCtrl._v_Rows.length) && ( candidatesCtrl._v_CellValuesCache && candidatesCtrl._v_CellValuesCache.length)">
+        ...Descargando ...
+    </div>
+
+    <div x-ng-show="candidatesCtrl.fIsCandidatesShown()" class="cssSpringnut_CandidatesShown">
+
+
+
+        <h4 class="cssSpringnut_CandidatesHeader" >
+            <!--
+            <button
+                    id="{{candidatesCtrl._v_DomIdPrefix}}_Candidates_{{candidatesCtrl._v_GridName}}_Button_Refresh"
+                    x-ng-if="candidatesCtrl._v_LastRetrieval || candidatesCtrl._v_Retrieval"
+                    x-ng-click="candidatesCtrl.fUICandidatesRefreshClickListener()"
+                    type="button"
+                    name="refresh"
+                    value=""
+                    class="cssSpringnut_Button cssSpringnut_CandidatesRefreshButton"
+                    x-UNUSED-title="Vuelve a leer y presentar los datos">
+                <i class="icon-refresh icon-white"></i>&nbsp;Refrescar
+            </button>
+            -->
+
+            <button
+                    id="{{candidatesCtrl._v_DomIdPrefix}}_Candidates_{{candidatesCtrl._v_GridName}}_Button_Cancel"
+                    x-ng-click="candidatesCtrl.fUICandidatesCancelClickListener()"
+                    type="button"
+                    name="cancelEditor"
+                    value=""
+                    class="cssSpringnut_Button cssSpringnut_CandidatesCancelButton"
+                    x-UNUSED-title="Cancela la selección de candidatos">
+                <i class="icon-exclamation icon-white"></i>&nbsp;Cancelar
+            </button>
+
+            [<span
+                id="{{candidatesCtrl._v_DomIdPrefix}}_Candidates_{{candidatesCtrl._v_GridName}}_Span_Length"
+                x-ng-bind="candidatesCtrl._v_Rows.length"></span>]
+
+            <span ng-bind="candidatesCtrl._v_GridLabel"></span>
+
+            <button
+                    id="{{candidatesCtrl._v_DomIdPrefix}}_Candidates_{{candidatesCtrl._v_GridName}}_Button_None"
+                    x-ng-click="candidatesCtrl.fUICandidatesNoneClickListener()"
+                    type="button"
+                    name="cancelEditor"
+                    value=""
+                    class="cssSpringnut_Button cssSpringnut_CandidatesNoneButton"
+                    x-UNUSED-title="No selecciona candidato alguno">
+                <i class="icon-remove icon-white"></i>&nbsp;Ninguno
+            </button>
+
+
+        </h4>
+
+
+        <div bindonce >
+            <table
+                bo-id="candidatesCtrl._v_DomIdPrefix + '_Grid_' + candidatesCtrl._v_GridName + '_HeadersTable'"
+                bo-class="candidatesCtrl._v_GridClasses.Table">
+
+                <thead>
+                    <tr
+                        bo-id="candidatesCtrl._v_DomIdPrefix + '_Grid_' + candidatesCtrl._v_GridName + '_HeaderRow'"
+                        bo-class="candidatesCtrl._v_GridClasses.HeaderRow" >
+
+                        <th
+                            bo-id="candidatesCtrl._v_DomIdPrefix + '_Grid_' + candidatesCtrl._v_GridName + '_HeaderRow_Col_' + aColumnIndex"
+                            align="center"
+                            bindonce="candidatesCtrl._v_HeaderCellCssCache[ aColumnIndex]"
+                            bo-class="candidatesCtrl._v_HeaderCellCssCache[ aColumnIndex]"
+
+                            x-ng-repeat="(aColumnIndex,aColumnLabel) in candidatesCtrl._v_Labels">
+
+                            <span
+                                bo-id="candidatesCtrl._v_DomIdPrefix + '_Grid_' + candidatesCtrl._v_GridName + '_HeaderRow_Col_' + aColumnIndex + '_Span'"
+                                bo-class="candidatesCtrl._v_GridClasses.HeaderSpan"
+
+                                bo-text="aColumnLabel" ></span>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+
+        <div
+             bindonce
+
+             bo-id="candidatesCtrl._v_DomIdPrefix + '_Grid_' + candidatesCtrl._v_GridName"
+
+             x-ng-show="candidatesCtrl._v_Rows && candidatesCtrl._v_Rows.length"
+             x-bo-class="candidatesCtrl._v_GridClasses.TableContainer"  >
+
+        </div>
+    </div>
+</div>
+
+<!-- Candidates END -->

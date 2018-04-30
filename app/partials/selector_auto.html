@@ -1,0 +1,191 @@
+<!--
+*
+* selector_auto.html
+*
+* Creado @author Antonio Carrasco Valero 201410300115
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+*
+* -->
+
+<div x-ng-if="selectorCtrl.fIsSelectorRendered()">
+
+    <div class="cssSpringnut_Progress cssSpringnut_Progress_Selector"
+         x-ng-if="selectorCtrl._v_Leyendo">
+        ...Leyendo ...
+    </div>
+
+    <div class="cssSpringnut_Progress cssSpringnut_Progress_Selector"
+         x-ng-if="selectorCtrl._v_Rows && selectorCtrl._v_Rows.length && !( selectorCtrl._v_CellValuesCache && selectorCtrl._v_CellValuesCache.length)">
+        ...Cargando ...
+    </div>
+
+    <div class="cssSpringnut_Progress cssSpringnut_Progress_Selector"
+         x-ng-if="!( selectorCtrl._v_Rows && selectorCtrl._v_Rows.length) && ( selectorCtrl._v_CellValuesCache && selectorCtrl._v_CellValuesCache.length)">
+        ...Descargando ...
+    </div>
+
+
+
+    <div x-ng-show="selectorCtrl.fIsSelectorShown()" class="cssSpringnut_SelectorShown">
+
+        <h4 class="cssSpringnut_SelectorHeader" >
+            <button
+                    id="{{selectorCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Button_Refresh"
+                    x-ng-if="selectorCtrl._v_LastRetrieval || selectorCtrl._v_Retrieval"
+                    x-ng-click="selectorCtrl.fUISelectorRefreshClickListener()"
+                    type="button"
+                    name="refreshSelector"
+                    value=""
+                    class="cssSpringnut_Button cssSpringnut_SelectorRefreshButton"
+                    x-UNUSED-title="Vuelve a leer y presentar los datos">
+                <i class="icon-refresh icon-white"></i>&nbsp;Refrescar
+            </button>
+
+            <button
+                    id="{{selectorCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Button_Cancel"
+                    x-ng-click="selectorCtrl.fUISelectorCancelClickListener()"
+                    type="button"
+                    name="cancelSelector"
+                    value=""
+                    class="cssSpringnut_Button cssSpringnut_SelectorCancelButton"
+                    x-UNUSED-title="Cancela la selección">
+                <i class="icon-exclamation icon-white"></i>&nbsp;Cancelar
+            </button>
+
+
+            <span
+                    x-ng-if="!selectorCtrl._v_Rows.length && selectorCtrl._v_EverRetrieved"
+                    ng-bind="'No hay ' + selectorCtrl._v_GridLabel + ' para seleccionar'"></span>
+
+            <span x-ng-if="selectorCtrl._v_Rows.length && gridCtrl._v_EverRetrieved">
+                 <span
+                     x-ng-include="'partials/selectorlength_auto.html'"
+                     class="cssSpringnut_GridLengthContainer"></span>
+            </span>
+
+            <span x-ng-if="selectorCtrl._v_Rows.length && !gridCtrl._v_EverRetrieved">
+                 <span
+                     x-ng-include="'partials/selectorlength_justpagemaxsize_auto.html'"
+                     class="cssSpringnut_GridLengthContainer"></span>
+            </span>
+
+
+            <span
+                    x-ng-if="!selectorCtrl._v_Rows.length && !selectorCtrl._v_EverRetrieved"
+                    ng-bind="'Pulsar Refrescar para ver ' + selectorCtrl._v_GridLabel"></span>
+
+            <span
+                    x-ng-if="selectorCtrl._v_Rows.length"
+                    id="{{selectorCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Span_Length"
+                    x-ng-bind="'Seleccionar ' + selectorCtrl._v_GridLabel + ' de entre [' + selectorCtrl._v_Rows.length + ']'"></span>
+
+
+
+            <button
+                    id="{{selectorCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Button_None"
+                    x-ng-click="selectorCtrl.fUISelectorNoneClickListener()"
+                    type="button"
+                    name="cancelEditor"
+                    value=""
+                    class="cssSpringnut_Button cssSpringnut_SelectorNoneButton"
+                    x-UNUSED-title="No selecciona candidato alguno">
+                <i class="icon-star-empty icon-white"></i>&nbsp;{{(gridCtrl._v_RetrievalTarget && 'Cualquiera') || 'Ninguno'}}
+            </button>
+        </h4>
+
+
+        <div bindonce >
+            <table
+                    bo-id="selectorCtrl._v_DomIdPrefix + '_Grid_' + selectorCtrl._v_GridName + '_HeadersTable'"
+                    bo-class="selectorCtrl._v_GridClasses.Table">
+
+                <thead>
+                <tr
+                        bo-id="selectorCtrl._v_DomIdPrefix + '_Grid_' + selectorCtrl._v_GridName + '_HeaderRow'"
+                        bo-class="selectorCtrl._v_GridClasses.HeaderRow" >
+
+                    <th
+                            bo-id="selectorCtrl._v_DomIdPrefix + '_Grid_' + selectorCtrl._v_GridName + '_HeaderRow_Col_' + aColumnIndex"
+                            align="center"
+                            bindonce="selectorCtrl._v_HeaderCellCssCache[ aColumnIndex]"
+                            bo-class="selectorCtrl._v_HeaderCellCssCache[ aColumnIndex]"
+
+                            x-ng-repeat="(aColumnIndex,aColumnLabel) in selectorCtrl._v_Labels">
+
+                            <span
+                                    bo-id="selectorCtrl._v_DomIdPrefix + '_Grid_' + selectorCtrl._v_GridName + '_HeaderRow_Col_' + aColumnIndex + '_Span'"
+                                    bo-class="selectorCtrl._v_GridClasses.HeaderSpan"
+
+                                    bo-text="aColumnLabel" ></span>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+
+
+        <div
+                bindonce
+
+                bo-id="selectorCtrl._v_DomIdPrefix + '_Grid_' + selectorCtrl._v_GridName"
+
+                x-ng-show="selectorCtrl._v_Rows && selectorCtrl._v_Rows.length"
+                x-bo-class="selectorCtrl._v_GridClasses.TableContainer"  >
+
+
+            <table
+                    bo-id="selectorCtrl._v_DomIdPrefix + '_Grid_' + selectorCtrl._v_GridName + '_Table'"
+                    bo-class="selectorCtrl._v_GridClasses.Table">
+
+
+                <tbody>
+                <tr
+                        bindonce
+                        bo-id="selectorCtrl._v_DomIdPrefix + '_Grid_' + selectorCtrl._v_GridName + '_Row_' + aRowIndex"
+                        bo-class="selectorCtrl._v_RowCssCache[ aRowIndex]"
+
+                        x-ng-repeat ="(aRowIndex,aRow) in selectorCtrl._v_CellValuesCache" >
+
+                    <td
+                            bindonce
+                            bo-id="selectorCtrl._v_DomIdPrefix + '_Grid_' + selectorCtrl._v_GridName + '_Row_' + aRowIndex + '_Col_' + aFieldIndex"
+                            bo-class="selectorCtrl._v_CellCssCache[ aRowIndex][ aFieldIndex]"
+
+                            x-ng-repeat="(aFieldIndex,aField) in selectorCtrl._v_Fields" >
+
+                            <span
+                                    bo-id="selectorCtrl._v_DomIdPrefix + '_Grid_' + selectorCtrl._v_GridName + '_Row_' + aRowIndex + '_Col_' + selectorCtrl._v_Fields[ aFieldIndex] + '_Span'"
+                                    bo-class="selectorCtrl._v_GridClasses.Span"
+
+                                    bo-text="selectorCtrl._v_CellValuesCache[ aRowIndex][ aFieldIndex]" ></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

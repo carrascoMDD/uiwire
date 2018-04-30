@@ -1,0 +1,75 @@
+[
+	{
+	"id":"test",
+	"entityName":"Municipio",
+	"pkFieldName": "idmunicipio",
+	"dialogCaptionLabel": "Seleccione el municipio",
+	"entityCaption": "municipio",
+	"baseFilter": {'codprovincia' : '46'},
+	"columns":
+		[
+		{"property":"codprovincia","label":"Código de provincia"},
+		{"property":"idmunicipio","label":"Código de municipio", "visible": false},
+		{"property":"municipio","label":"Municipio"}
+		]
+	},
+	{
+    "id":"select_ficheron",
+    "entityName":"Ficheron",
+    "pkFieldName": "idfichero",
+    "dialogCaptionLabel": "Seleccione el fichero",
+    "entityCaption": "#format('%s/%s/%s',provincia,ano,mes)",
+    "searchByNbol": true,
+    "columns":
+        [
+        {"property":"provincia","label":"Código de provincia"},
+        {"property":"mes","label":"Mes"},
+        {"property":"ano","label":"año"}
+        ]
+    },
+	{
+    "id":"select_ficheroj",
+    "entityName":"Ficheroj",
+    "pkFieldName": "idfichero",
+    "dialogCaptionLabel": "Seleccione el fichero judicial",
+    "entityCaption": "#format('%s/%s/%s',provincia,ano,mes)",
+    "searchByNbol": true,
+    "columns":
+        [
+        {"property":"provincia","label":"Código de provincia"},
+        {"property":"mes","label":"Mes"},
+        {"property":"ano","label":"año"}
+        ]
+    },
+    {
+    "id":"select_ficherocd",
+    "entityName":"Ficheroscdimag",
+    "pkFieldName": "idcd",
+    "dialogCaptionLabel": "Seleccione el fichero con imágenes a eliminar",
+    "entityCaption": "#format('%s/%s/%s/%s/%s/%s',cdFecha,cdAnyo,cdMes,cdProv,cdJudicial,cdImagenes)",
+    "searchByNbol": false,
+    "columns":
+        [
+        {"property":"cdFecha","label":"Fecha Importación"},
+        {"property":"cdAnyo","label":"Año"},
+        {"property":"cdMes","label":"Mes"},
+        {"property":"cdProv","label":"Provincia"},
+        {"property":"cdJudicial","label":"Judicial"},
+        {"property":"cdImagenes","label":"Imágenes"}
+        ]
+    },
+    {
+    "id":"select_ficheron_errores_y_avisos",
+    "entityName":"Ficheron",
+    "pkFieldName": "idfichero",
+    "dialogCaptionLabel": "Seleccione el fichero",
+    "entityCaption": "#format('%s/%s/%s/%s',ano,mes,provincia,nombrefichero)",
+    "columns":
+        [
+        {"property":"ano","label":"año"},
+        {"property":"mes","label":"Mes"},
+        {"property":"provincia","label":"Código de provincia"},
+        {"property":"nombrefichero","label":"Fichero"}
+        ]
+    }
+]

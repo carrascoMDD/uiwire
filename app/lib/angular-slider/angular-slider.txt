@@ -1,0 +1,4 @@
+http://ngmodules.org/modules/angular-slider
+
+http://prajwalkman.github.io/angular-slider/
+

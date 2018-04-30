@@ -1,0 +1,81 @@
+<!--
+*
+* fase-informedisponible.html
+*
+* Creado @author Antonio Carrasco Valero 201411091832
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Utiliza uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+ Licensed under the EUPL, Version 1.1 only (the "Licence"); You may not use this work except in compliance with the Licence. You may obtain a copy of the Licence at: https://joinup.ec.europa.eu/software/page/eupl/licence-eupl Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+*
+* -->
+
+<!-- BEGIN existeresultado Custom Field template -->
+
+
+<div
+    x-ng-if="editorCtrl._v_Fields[ 'existeresultado'] || editorCtrl._v_Fields['ultimaFaserealizada'][ 'existeresultado']"
+    id="{{editorCtrl._v_DomIdPrefix}}_Editor_{{editorCtrl._v_EditorName}}_Field_{{aFieldSpec.name}}_View_LabelContainer"
+    x-ng-class="editorCtrl._v_EditorClasses.LabelContainer">
+
+    <span
+        id="{{editorCtrl._v_DomIdPrefix}}_Editor_{{editorCtrl._v_EditorName}}_Field_{{aFieldSpec.name}}_View_Label_Span"
+        x-ng-class="aFieldSpec.labelCss">Informe disponible</span>
+</div>
+
+
+<a
+    href="{{fasesvalidacionCtrl._v_AppBaseURL}}reports/Validaciones/appAvisosYErroresVistaPrevia?theTipoBoletin={{editorCtrl.fParentCtrl()._v_TipoBoletinForURL}}&theIdFase={{editorCtrl._v_Fields['id'] || editorCtrl._v_Fields['ultimaFaserealizada']['id']}}"
+    target="_blank">
+    <button
+        x-ng-if="editorCtrl._v_Fields[ 'existeresultado'] || editorCtrl._v_Fields['ultimaFaserealizada'][ 'existeresultado']"
+        id="{{editorCtrl._v_DomIdPrefix}}_Editor_{{editorCtrl._v_EditorName}}_Button_VistaPrevia"
+        type="button"
+        name="reportpreview"
+        value=""
+        class="cssSpringnut_Button cssSpringnut_PreviewButton"
+        x-UNUSED-title="Muestra una vista previa del informe en una nueva pestaña del navegador">
+        <i class="icon-eye-open icon-white"></i>&nbsp;Vista previa
+    </button>
+</a>
+
+&ensp;
+
+<a
+    href="{{fasesvalidacionCtrl._v_AppBaseURL}}reports/Validaciones/ErroresYavisosTree?idFase={{editorCtrl._v_Fields['id'] || editorCtrl._v_Fields['ultimaFaserealizada']['id']}}"
+    target="_blank">
+    <button
+        x-ng-if="editorCtrl._v_Fields[ 'existeresultado'] || editorCtrl._v_Fields['ultimaFaserealizada'][ 'existeresultado']"
+        id="{{editorCtrl._v_DomIdPrefix}}_Editor_{{editorCtrl._v_EditorName}}_Button_Descarga"
+        x-ng-click="editorCtrl.fParentCtrl().fUIDescargaInformeClickListener( 'ine', editorCtrl._v_Fields[ 'id'])"
+        type="button"
+        name="reportdownload"
+        value=""
+        class="cssSpringnut_Button cssSpringnut_DownloadButton"
+        x-UNUSED-title="Descarga el informe como documento .pdf">
+        <i class="icon-print icon-white"></i>&nbsp;Descargar
+    </button>
+</a>
+
+
+
+<div
+    x-ng-if="!( editorCtrl._v_Fields[ 'existeresultado'] || editorCtrl._v_Fields['ultimaFaserealizada'][ 'existeresultado'])"
+    id="{{editorCtrl._v_DomIdPrefix}}_Editor_{{editorCtrl._v_EditorName}}_Field_{{aFieldSpec.name}}_View_LabelContainer"
+    x-ng-class="editorCtrl._v_EditorClasses.LabelContainer">
+
+    <span
+        id="{{editorCtrl._v_DomIdPrefix}}_Editor_{{editorCtrl._v_EditorName}}_Field_{{aFieldSpec.name}}_View_Label_Span"
+        x-ng-class="aFieldSpec.labelCss">Informe no disponible</span>
+</div>
+
+<!-- END existeresultadoCustom Field template -->

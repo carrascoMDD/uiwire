@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html 
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+    layout:decorator="@{layouts/default}">
+<head>
+
+	<title>EXCEPCIÓN</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link layout:include="/layouts/springnut_styles :: springnut_styles_fragment" th:remove="tag"></link>
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../../styles/springnut_excepcion_styles.css" th:href="@{/resources/styles/springnut_excepcion_styles.css}" />
+
+
+    <script layout:include="/layouts/springnut_scripts :: springnut_scripts_fragment" th:remove="tag"></script>
+
+</head>
+<body>
+
+    <div class="cssSpringnut_container">
+
+        <h1 layout:fragment="tit_page" class="cssSpringnut_page_header_tit_page cssSpringnut_page_header_tit_page_excepcion">EXCEPCIÓN</h1>
+
+        <div id="page_content" layout:fragment="content">
+
+            <div class="cssSpringnut_content">
+
+                <input type="hidden" name="AppBaseURLfld" id="did_AppBaseURLfld" value="" th:value="@{/}" />
+
+                <div  id="excepcion_error_message" class="cssSpringnut_excepcion_error_div"  >
+
+                    <h3 class="cssSpringnut_excepcion_error_title">
+                        <i class="icon-warning-sign errors"></i>
+                        EXCEPCIÓN DURANTE LA ACCIÓN SOLICITADA
+                    </h3>
+                </div>
+
+
+
+                <div id="excepcion_rutasolicitada"  class="cssSpringnut_excepcion_rutasolicitada">
+
+                    <span id="did_excepcionJSON_vHttpMethod"     class="cssSpringnut_excepcion_rutasolicitada" th:text="${excepcionJSON.vHttpMethod}" />
+                    <span id="did_excepcionJSON_vRutaSolicitada" class="cssSpringnut_excepcion_rutasolicitada" th:text="${excepcionJSON.vRutaSolicitada}" />
+                </div>
+                <br/>
+
+                <br/>
+                <p>
+                    <a class="cssSpringnut_explorar_excepciones_link" th:href="@{/app/eventos.html#/eventos_tEvt_Excepciones}">Pulse para explorar Excepciones en Eventos</a>
+                </p>
+                <br/>
+                <hr/>
+
+                <link layout:include="/layouts/excepcion :: excepcion_fragment" th:with="theExcepcionJSONHere=${excepcionJSON}" th:remove="tag"></link>
+
+
+            </div>
+
+            <br/>
+
+
+        </div>
+
+        <div id="page_footer"></div>
+
+    </div>
+
+</body>
+</html>

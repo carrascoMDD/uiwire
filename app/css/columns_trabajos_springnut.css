@@ -1,0 +1,110 @@
+/*
+*
+* columns_trabajos_springnut.css
+*
+* Creado @author Antonio Carrasco Valero 201411280001
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+*
+*/
+
+
+td.cssSpringnut_Trabajos_ListaTrabajos_TrIdtrabajo,
+th.cssSpringnut_Trabajos_ListaTrabajos_TrIdtrabajo{
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    text-align: left;
+}
+
+td.cssSpringnut_Trabajos_ListaTrabajos_TrTipotrabajo,
+th.cssSpringnut_Trabajos_ListaTrabajos_TrTipotrabajo  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+td.cssSpringnut_Trabajos_ListaTrabajos_TrFechaStr,
+th.cssSpringnut_Trabajos_ListaTrabajos_TrFechaStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+td.cssSpringnut_Trabajos_ListaTrabajos_TrFechaultimaStr,
+th.cssSpringnut_Trabajos_ListaTrabajos_TrFechaultimaStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+td.cssSpringnut_Trabajos_ListaTrabajos_TrFechaultimaStr,
+th.cssSpringnut_Trabajos_ListaTrabajos_TrFechaultimaStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+td.cssSpringnut_Trabajos_ListaTrabajos_TrEstado,
+th.cssSpringnut_Trabajos_ListaTrabajos_TrEstado  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+td.cssSpringnut_Trabajos_ListaTrabajos_TrExitoLabel,
+th.cssSpringnut_Trabajos_ListaTrabajos_TrExitoLabel  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+td.cssSpringnut_Trabajos_ListaTrabajos_TrEstadoejecucion,
+th.cssSpringnut_Trabajos_ListaTrabajos_TrEstadoejecucion  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+td.cssSpringnut_Trabajos_ListaTrabajos_TrNombrepaso,
+th.cssSpringnut_Trabajos_ListaTrabajos_TrNombrepaso  {
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+    text-align: left;
+}
+
+td.cssSpringnut_Trabajos_ListaTrabajos_TrCausaerrorLabel,
+th.cssSpringnut_Trabajos_ListaTrabajos_TrCausaerrorLabel {
+    width: 100%;
+    text-align: left;
+}
