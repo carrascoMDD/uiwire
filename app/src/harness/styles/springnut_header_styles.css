@@ -1,0 +1,160 @@
+/*
+*
+* springnut_header_styles.css
+*
+* Creado @author Antonio Carrasco Valero 201505290100
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Utiliza uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+ Licensed under the EUPL, Version 1.1 only (the "Licence"); You may not use this work except in compliance with the Licence. You may obtain a copy of the Licence at: https://joinup.ec.europa.eu/software/page/eupl/licence-eupl Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ @author Antonio Carrasco Valero
+
+ ***************************************************************************
+*
+*/
+
+div.cssSpringnut_home_header_container {
+    background-color: #602d65;
+    color: white;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+}
+
+div.cssSpringnut_home_header_logo_container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+img.cssSpringnut_home_header_logo_img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+div.cssSpringnut_home_header_title_container {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 12px;
+}
+
+h1.cssSpringnut_home_header_title {
+    display: inline-block;
+    line-height: 50px;
+}
+
+span.cssSpringnut_home_header_title_span {
+    font-size: 56px;
+    color: #6db33f;
+}
+
+
+span.cssSpringnut_home_header_subtitle_span {
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+}
+
+
+
+div.cssSpringnut_page_header_container {
+    background-color: #602d65;
+    color: white;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+div.cssSpringnut_page_header_logo_container {
+   display: inline-block;
+   vertical-align: top;
+}
+
+
+img.cssSpringnut_page_header_logo_img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+div.cssSpringnut_page_header_title_container {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 12px;
+}
+
+h1.cssSpringnut_page_header_title {
+    display: inline-block;
+    /* line-height: 50px; */
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+span.cssSpringnut_page_header_title_span {
+    font-size: 50px;
+    color: #6db33f;
+}
+
+
+h2.cssSpringnut_page_header_subtitle {
+    display: inline-block;
+    line-height: 24px
+}
+
+
+span.cssSpringnut_page_header_subtitle_span {
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+}
+
+
+h1.cssSpringnut_page_header_tit_page {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+
+
+div.cssSpringnut_copyright_container {
+
+}
+
+p.cssSpringnut_copyright_p {
+    text-align: center;
+    color: #46214a;
+}
+
+
+
+div.cssSpringnut_license_container {
+
+}
+
+p.cssSpringnut_license_p {
+    text-align: center;
+    color: #46214a;
+}
+
+a.cssSpringnut_license_a {
+}

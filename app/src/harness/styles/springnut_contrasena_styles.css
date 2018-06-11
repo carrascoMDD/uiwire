@@ -1,0 +1,163 @@
+/*
+*
+* cssSpringnut_contrasena_styles.css
+*
+* Creado @author Antonio Carrasco Valero 201505311909
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Utiliza uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+ Licensed under the EUPL, Version 1.1 only (the "Licence"); You may not use this work except in compliance with the Licence. You may obtain a copy of the Licence at: https://joinup.ec.europa.eu/software/page/eupl/licence-eupl Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ @author Antonio Carrasco Valero
+
+ ***************************************************************************
+*
+*/
+
+
+div.cssSpringnut_cambiarcontrasena {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    width: 480px;
+    background-color: white;
+}
+
+
+
+
+div.cssSpringnut_cambiarcontrasena_error {
+    background-color: #F2DEDE;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+
+div.cssSpringnut_contrasenacambiada {
+    background-color: #F2DEDE;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+
+h3.cssSpringnut_cambiarcontrasena_error_title {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+span.cssSpringnut_cambiarcontrasena_error {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+h3.cssSpringnut_cambiarcontrasena_prompt {
+    text-align: center;
+    color: #46214a;
+}
+
+
+
+span.cssSpringnut_cambiarcontrasena_actual_label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #46214a;
+}
+
+span.cssSpringnut_cambiarcontrasena_actual {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+}
+
+
+form.cssSpringnut_cambiarcontrasena_form {
+    margin: 12px;
+}
+
+label.cssSpringnut_cambiarcontrasena_label {
+    display: inline-block;
+    width: 180px;
+    min-width: 180px;
+    text-align: right;
+    vertical-align: middle;
+    color: #46214a;
+    padding-right: 8px;
+    font-weight: bold;
+    cursor: auto;
+}
+
+label.cssSpringnut_cambiarcontrasena_actual_label {
+
+}
+
+
+label.cssSpringnut_cambiarcontrasena_nueva_label {
+
+}
+
+
+label.cssSpringnut_cambiarcontrasena_nueva_repetida_label {
+
+}
+
+
+input.cssSpringnut_cambiarcontrasena_input {
+    width: 180px;
+    vertical-align: middle;
+}
+
+
+input.cssSpringnut_cambiarcontrasena_actual_input {
+
+}
+
+input.cssSpringnut_cambiarcontrasena_nueva_input {
+
+}
+
+input.cssSpringnut_cambiarcontrasena_nueva_repetida_input {
+
+}
+
+
+div.cssSpringnut_cambiarcontrasena_buttons {
+}
+
+
+h3.cssSpringnut_contrasenacambiada_title {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+span.cssSpringnut_contrasenacambiada {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+span.cssSpringnut_contrasenacambiada a {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}

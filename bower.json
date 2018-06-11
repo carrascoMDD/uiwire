@@ -1,0 +1,36 @@
+{
+    "name": "priiclientcommon",
+    "description": "AngularJS components including Tabs, Arguments, Table, Selector, Candidates, Editor, Creator, Action and wires, zero code with JSON specs.",
+    "main": "",
+    "authors": [
+        "Antonio Carrasco Valero <carrascomdd@gmail.com>"
+    ],
+    "license": "PRORIETARY",
+    "keywords": [
+        "angularjs",
+        "single page application",
+        "tabs",
+        "arguments",
+        "table",
+        "selector",
+        "candidates",
+        "editor",
+        "creator",
+        "action",
+        "wires",
+        "zero-code",
+        "JSONspecs"
+    ],
+    "homepage": "http://github.com/carrascoMDD/uiwire",
+    "moduleType": [
+        "globals"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+    }
+}

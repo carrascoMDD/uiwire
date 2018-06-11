@@ -1,0 +1,132 @@
+/*
+*
+* springnut_login_styles.css
+*
+* Creado @author Antonio Carrasco Valero 201506011651
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Utiliza uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+ Licensed under the EUPL, Version 1.1 only (the "Licence"); You may not use this work except in compliance with the Licence. You may obtain a copy of the Licence at: https://joinup.ec.europa.eu/software/page/eupl/licence-eupl Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ @author Antonio Carrasco Valero
+
+ ***************************************************************************
+*
+*/
+
+div.cssSpringnut_login {
+    margin: auto;
+    padding: 12px;
+    width: 360px;
+    background-color: white;
+}
+
+div.cssSpringnut_login_saved_url {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    width: 100%;
+    border-top: 4px solid #EFEAEE;
+    background-color: white;
+}
+
+span.cssSpringnut_login_saved_url {
+    text-align: center;
+    background-color: white;
+    color: #801850;
+    background-color: inherit;
+}
+
+
+
+div.cssSpringnut_login_error_div {
+    background-color: #F2DEDE;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+h3.cssSpringnut_login_error_title {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+span.cssSpringnut_login_error {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+h2.cssSpringnut_login_prompt {
+    text-align: center;
+    color: #46214a;
+}
+
+
+
+span.cssSpringnut_login_democredentials_label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #46214a;
+}
+
+span.cssSpringnut_login_democredentials {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+}
+
+
+form.cssSpringnut_login_form {
+    margin: 12px;
+}
+
+label.cssSpringnut_login_label {
+    display: inline-block;
+    width: 80px;
+    min-width: 80px;
+    text-align: right;
+    vertical-align: middle;
+    color: #46214a;
+    padding-right: 8px;
+    font-weight: bold;
+    cursor: auto;
+}
+
+label.cssSpringnut_login_username_label {
+
+}
+
+input.cssSpringnut_login_input {
+    width: 180px;
+    vertical-align: middle;
+}
+
+input.cssSpringnut_login_username_input {
+
+}
+
+label.cssSpringnut_login_password_label {
+
+}
+
+input.cssSpringnut_login_password_input {
+
+}
+
+div.cssSpringnut_login_buttons {
+}

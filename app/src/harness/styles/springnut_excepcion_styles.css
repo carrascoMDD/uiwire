@@ -1,0 +1,174 @@
+/*
+*
+* springnut_excepcion_styles.css
+*
+* Creado @author Antonio Carrasco Valero 201506021536
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Utiliza uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+ Licensed under the EUPL, Version 1.1 only (the "Licence"); You may not use this work except in compliance with the Licence. You may obtain a copy of the Licence at: https://joinup.ec.europa.eu/software/page/eupl/licence-eupl Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ @author Antonio Carrasco Valero
+
+ ***************************************************************************
+*
+*/
+
+
+h1.cssSpringnut_page_header_tit_page_excepcion {
+    color: red;
+    font-size: 40px;
+}
+
+div.cssSpringnut_excepcion {
+    margin: auto;
+    padding: 12px;
+    width: 360px;
+    background-color: white;
+}
+
+div.cssSpringnut_excepcion_rutasolicitada {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    border-top: 4px solid #EFEAEE;
+    background-color: white;
+}
+
+span.cssSpringnut_excepcion_rutasolicitada {
+    text-align: center;
+    background-color: white;
+    color: #801850;
+    background-color: inherit;
+}
+
+
+
+div.cssSpringnut_excepcion_error_div {
+    background-color: #F2DEDE;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+h3.cssSpringnut_excepcion_error_title {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+a.cssSpringnut_explorar_excepciones_link {
+    display: inline-block;
+    background-color: #f07a36;
+    border-right-style: solid;
+    border-right-width: 0px;
+    border-right-color: #FFC8AB;
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+    border-bottom-color: #ffebe0;
+    padding: 8px;
+    margin: 0px;
+    border-radius: 6px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+
+span.cssSpringnut_excepcion_error {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+h4.cssSpringnut_excepcion_class {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+p.cssSpringnut_excepcion_message {
+    color: red;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+div.cssSpringnut_ExcepcionJSON_textarea_and_table {
+    width: auto;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div.cssSpringnut_ExcepcionJSON_textarea_container {
+    width: 100%;
+}
+
+textarea.cssSpringnut_ExcepcionJSON_textarea {
+    width:  100%;
+    min-height: 150px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 0;
+}
+
+
+
+table.cssSpringnut_ExcepcionJSON_table {
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+th.cssSpringnut_ExcepcionJSON_headerCell {
+    color: #555555;
+    text-align: left;
+    font-size: 11px;
+    font-weight: bold;
+    border-collapse:collapse;
+    border-spacing: 0;
+    border: 1px solid #EEF0F3;
+    border: 0;
+    padding: 4px 6px 4px 6px;
+    background-color: #EEF0F3;
+}
+
+td.cssSpringnut_ExcepcionJSON_cell {
+    color: #555555;
+    text-align: left;
+    background-color: white;
+    text-align: left;
+    border: 1px solid #EEF0F3;
+    border-collapse:collapse;
+    border-spacing: 0;
+    padding: 4px 6px 4px 6px;
+}
+
+
+h3.cssSpringnut_excepcion_causaanidada {
+    color: #46214a;
+    font-weight: bold;
+    font-size: 18px;
+}
