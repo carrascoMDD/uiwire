@@ -38,10 +38,20 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: [
-                    'zzz-app/**/*'
+                    'app/src/index.html',
+                    'app/src/LICENCIA',
+                    'app/src/LICENSE',
+    
+                    'app/src/css/**/*',
+                    'app/src/data/**/*',
+                    'app/src/harness/**/*',
+                    'app/src/img/**/*',
+                    'app/src/js/**/*',
+                    'app/src/lib/**/*',
+                    'app/src/partials/**/*',
                 ],
 
-                tasks: [ 'clean', 'copy', 'concatwhole', 'uglifywhole'],
+                tasks: [ 'clean', 'copy'],
                 options: {
                     spawn:false,
                     event:['all']
