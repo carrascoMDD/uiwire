@@ -48,23 +48,23 @@
     
     <!-- <link layout:include="/layouts/default_styles :: default_styles_fragment" th:remove="tag"></link> -->
     <!-- BEGIN styles para el default layout  -->
-    <link rel="stylesheet" type="text/css" media="all" href="harness/styles/ui-lightTabs/jquery-ui-1.10.3.custom.css" />
-    <!-- <link rel="stylesheet" type="text/css" media="all" href="harness/styles/ui-lightness/jquery-ui-1.10.2.custom.css" th:href="@{/resources/styles/ui-lightness/jquery-ui-1.10.2.custom.css}"/>-->
-    <link rel="stylesheet" type="text/css" media="all" href="harness/styles/bootstrap.css"  />
-    <link rel="stylesheet" type="text/css" media="all" href="harness/styles/bootstrap-responsive.css"/>
-    <link rel="stylesheet" type="text/css" media="all" href="harness/styles/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="app/harness/styles/ui-lightTabs/jquery-ui-1.10.3.custom.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="all" href="app/harness/styles/ui-lightness/jquery-ui-1.10.2.custom.css" th:href="@{/resources/styles/ui-lightness/jquery-ui-1.10.2.custom.css}"/>-->
+    <link rel="stylesheet" type="text/css" media="all" href="app/harness/styles/bootstrap.css"  />
+    <link rel="stylesheet" type="text/css" media="all" href="app/harness/styles/bootstrap-responsive.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="app/harness/styles/font-awesome.min.css" />
     <!--[if IE 7]>
-    <link rel="stylesheet" type="text/css" href="harness/styles/font-awesome-ie7.min.css" />
+    <link rel="stylesheet" type="text/css" href="app/harness/styles/font-awesome-ie7.min.css" />
     <![endif]-->
     <!-- END styles  para el default layout  -->
     
     
     <!-- <link layout:include="/layouts/springnut_styles :: springnut_styles_fragment" th:remove="tag"></link> -->
     <!-- BEGIN estilos especificos de la aplicacion springnut  -->
-    <link rel="stylesheet" type="text/css" media="all" href="harness/styles/springnut_header_styles.css"/>
-    <link rel="stylesheet" type="text/css" media="all" href="harness/styles/springnut_menubar_styles.css"/>
-    <link rel="stylesheet" type="text/css" media="all" href="harness/styles/springnut_content_styles.css"/>
-    <link rel="stylesheet" type="text/css" media="all" href="harness/styles/springnut_features_styles.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="app/harness/styles/springnut_header_styles.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="app/harness/styles/springnut_menubar_styles.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="app/harness/styles/springnut_content_styles.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="app/harness/styles/springnut_features_styles.css"/>
     <!-- END estilos especificos de la aplicacion springnut  -->
     
     
@@ -84,32 +84,32 @@
     </script>
     <![endif]-->
     <!-- estilos generales para este tipo de implementacion con angular -->
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="lib/angular-strap/vendor/bootstrap-datepicker.css"/>
+    <link rel="stylesheet" href="app/css/app.css" />
+    <link rel="stylesheet" href="app/lib/angular-strap/vendor/bootstrap-datepicker.css"/>
     <!-- estilos de instrumentacion de tests -->
-    <link rel="stylesheet" href="css/rowindexfinder.css" />
-    <link rel="stylesheet" href="css/runningtest.css" />
+    <link rel="stylesheet" href="app/css/rowindexfinder.css" />
+    <link rel="stylesheet" href="app/css/runningtest.css" />
     <!-- END estilos para soportar marco de interfaz de usuario con AngularJS -->
     
     
     <!-- <link layout:include="/layouts/springnut_app_styles :: springnut_app_styles_fragment" th:remove="tag"></link> -->
     <!-- BEGIN estilos especificos de la aplicacion springnut con angular -->
-    <link rel="stylesheet" href="css/app_springnut.css" />
+    <link rel="stylesheet" href="app/css/app_springnut.css" />
     <!-- END estilos especificos de la aplicacion springnut con angular -->
 			
     <!-- BEGIN estilos especificos de la pantalla adminoperadores de la aplicacion springnut con angular -->
-    <link rel="stylesheet" href="css/columns_adminoperadores_springnut.css" />
+    <link rel="stylesheet" href="app/css/columns_adminoperadores_springnut.css" />
     <!-- END estilos especificos de la pantalla adminoperadores de la aplicacion springnut con angular -->
     
     
     <!-- <link layout:include="/layouts/default_scripts :: default_scripts_fragment" th:remove="tag"></link> -->
     <!-- BEGIN scripts para el default layout  -->
-    <script src="harness/scripts/jquery.js"></script>
+    <script src="app/harness/scripts/jquery.js"></script>
     <!-- min version src="/resources/scripts/jquery.min.js" -->
-    <script src="harness/scripts/jquery-ui.custom.js"></script>
-    <script src="harness/scripts/bootstrap.js"></script>
+    <script src="app/harness/scripts/jquery-ui.custom.js"></script>
+    <script src="app/harness/scripts/bootstrap.js"></script>
     <!-- min version src="/resources/scripts/bootstrap.min.js" -->
-    <script src="harness/scripts/polyfiller.js" ></script>
+    <script src="app/harness/scripts/polyfiller.js" ></script>
     <script>
         webshim.polyfill('canvas details es5 filereader forms forms-ext picture url track');
     </script>
@@ -120,162 +120,162 @@
     
     <!-- <script layout:include="/layouts/springnut_scripts :: springnut_scripts_fragment" th:remove="tag"></script> -->
     <!-- BEGIN scripts especificos de la aplicacion springnut  -->
-    <!-- removeall => remove ?  --> <script src="harness/scripts/jquery-ui.custom.js"></script>
-    <!-- removeall => remove ? --> <script src="harness/scripts/jquery.ui.datepicker-es.js" ></script>
+    <!-- removeall => remove ?  --> <script src="app/harness/scripts/jquery-ui.custom.js"></script>
+    <!-- removeall => remove ? --> <script src="app/harness/scripts/jquery.ui.datepicker-es.js" ></script>
     <!-- END scripts especificos de la aplicacion springnut  -->
     
     
     <!-- <script layout:include="/layouts/angular_scripts :: angular_scripts_fragment" th:remove="tag"></script> -->
     <!-- BEGIN scripts de AngularJS -->
-    <script type="text/javascript" src="lib/angular/angular.js"></script>
-    <script type="text/javascript" src="lib/angular/angular-animate.js"></script>
-    <script type="text/javascript" src="lib/angular/i18n/angular-locale_es-es.js"></script>
-    <script type="text/javascript" src="lib/angular/angular-resource.js"></script>
-    <script type="text/javascript" src="lib/angular/angular-route.js"></script>
-    <script type="text/javascript" src="lib/angular-strap/dist/angular-strap.js"></script>
-    <script type="text/javascript" src="lib/angular-strap/vendor/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="lib/ui-bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
-    <script type="text/javascript" src="lib/md5.js"></script>
-    <script type="text/javascript" src="lib/angularjs-mongolab-promise/mongolabResourceHttp.js"></script>
-    <script type="text/javascript" src="lib/notification-widget/notificationWidget.js"></script>
-    <script type="text/javascript" src="lib/bindonce/bindonce.js"></script>
+    <script type="text/javascript" src="app/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="app/lib/angular/angular-animate.js"></script>
+    <script type="text/javascript" src="app/lib/angular/i18n/angular-locale_es-es.js"></script>
+    <script type="text/javascript" src="app/lib/angular/angular-resource.js"></script>
+    <script type="text/javascript" src="app/lib/angular/angular-route.js"></script>
+    <script type="text/javascript" src="app/lib/angular-strap/dist/angular-strap.js"></script>
+    <script type="text/javascript" src="app/lib/angular-strap/vendor/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="app/lib/ui-bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+    <script type="text/javascript" src="app/lib/md5.js"></script>
+    <script type="text/javascript" src="app/lib/angularjs-mongolab-promise/mongolabResourceHttp.js"></script>
+    <script type="text/javascript" src="app/lib/notification-widget/notificationWidget.js"></script>
+    <script type="text/javascript" src="app/lib/bindonce/bindonce.js"></script>
     <!-- END scripts de AngularJS -->
     
     
 
     <!-- script principal de carga de aplicacion, declaracion de modulos requeridos, y configuracion del router de URLs a controladores -->
-    <script type="text/javascript" src="js/app_adminoperadores.js"></script>
+    <script type="text/javascript" src="app/js/app_adminoperadores.js"></script>
     
     
     <!-- <script layout:include="/layouts/app_scripts :: app_scripts_fragment" th:remove="tag"></script> -->
     <!-- BEGIN scripts del marco de interfaz de usuario con AngularJS -->
     <!-- BEGIN scripts de terceras partes para este tipo de implementacion con angular -->
-    <script type="text/javascript" src="lib/stacktrace.js"></script>
-    <script src="lib/angular-file-upload/angular-file-upload-shim.js"></script>
-    <script src="lib/angular-file-upload/angular-file-upload.js"></script>
-    <!-- <script src="lib/angular-file-upload/angular-file-upload-shim.min.js"></script>
-         <script src="lib/angular-file-upload/angular-file-upload.min.js"></script> -->
+    <script type="text/javascript" src="app/lib/stacktrace.js"></script>
+    <script src="app/lib/angular-file-upload/angular-file-upload-shim.js"></script>
+    <script src="app/lib/angular-file-upload/angular-file-upload.js"></script>
+    <!-- <script src="app/lib/angular-file-upload/angular-file-upload-shim.min.js"></script>
+         <script src="app/lib/angular-file-upload/angular-file-upload.min.js"></script> -->
     <!-- END scripts de terceras partes para este tipo de implementacion con angular -->
     <!-- scripts propios para este tipo de implementacion con angular -->
-    <script type="text/javascript" src="js/roots/logmoduleloads.js"></script>
-    <script type="text/javascript" src="js/controllers.js"></script>
-    <script type="text/javascript" src="js/rowindexfinder.js"></script>
-    <script type="text/javascript" src="js/runningtest.js"></script>
-    <script type="text/javascript" src="js/filters.js"></script>
-    <script type="text/javascript" src="js/directives.js"></script>
-    <script type="text/javascript" src="js/services.js"></script>
-    <script type="text/javascript" src="js/controllers.js"></script>
-    <script type="text/javascript" src="js/csskeys.js"></script>
-    <script type="text/javascript" src="js/cssnames.js"></script>
-    <script type="text/javascript" src="js/utils/exceptiondetails_svce.js"></script>
-    <script type="text/javascript" src="js/utils/fillspecs_svce_type.js"></script>
-    <script type="text/javascript" src="js/utils/decoratesystemprototypes_svce.js"></script>
-    <script type="text/javascript" src="js/appversion/appversion_svce.js"></script>
-    <script type="text/javascript" src="js/appversion/appversion_ctrl.js"></script>
-    <script type="text/javascript" src="js/common/typesregistry.js"></script>
-    <script type="text/javascript" src="js/roots/roots_types.js"></script>
-    <script type="text/javascript" src="js/roots/overrider_type.js"></script>
-    <script type="text/javascript" src="js/roots/overrider_svce.js"></script>
-    <script type="text/javascript" src="js/roots/appbaseurl_type.js"></script>
-    <script type="text/javascript" src="js/roots/appbaseurl_svce.js"></script>
-    <script type="text/javascript" src="js/roots/apibaseurl_type.js"></script>
+    <script type="text/javascript" src="app/js/roots/logmoduleloads.js"></script>
+    <script type="text/javascript" src="app/js/controllers.js"></script>
+    <script type="text/javascript" src="app/js/rowindexfinder.js"></script>
+    <script type="text/javascript" src="app/js/runningtest.js"></script>
+    <script type="text/javascript" src="app/js/filters.js"></script>
+    <script type="text/javascript" src="app/js/directives.js"></script>
+    <script type="text/javascript" src="app/js/services.js"></script>
+    <script type="text/javascript" src="app/js/controllers.js"></script>
+    <script type="text/javascript" src="app/js/csskeys.js"></script>
+    <script type="text/javascript" src="app/js/cssnames.js"></script>
+    <script type="text/javascript" src="app/js/utils/exceptiondetails_svce.js"></script>
+    <script type="text/javascript" src="app/js/utils/fillspecs_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/utils/decoratesystemprototypes_svce.js"></script>
+    <script type="text/javascript" src="app/js/appversion/appversion_svce.js"></script>
+    <script type="text/javascript" src="app/js/appversion/appversion_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/common/typesregistry.js"></script>
+    <script type="text/javascript" src="app/js/roots/roots_types.js"></script>
+    <script type="text/javascript" src="app/js/roots/overrider_type.js"></script>
+    <script type="text/javascript" src="app/js/roots/overrider_svce.js"></script>
+    <script type="text/javascript" src="app/js/roots/appbaseurl_type.js"></script>
+    <script type="text/javascript" src="app/js/roots/appbaseurl_svce.js"></script>
+    <script type="text/javascript" src="app/js/roots/apibaseurl_type.js"></script>
     <!--
-    <script type="text/javascript" src="js/roots/apibaseurl_spring_type.js"></script>
+    <script type="text/javascript" src="app/js/roots/apibaseurl_spring_type.js"></script>
     -->
-    <script type="text/javascript" src="js/roots/apibaseurl_svce.js"></script>
-    <script type="text/javascript" src="js/identifying/identifying_types.js"></script>
-    <script type="text/javascript" src="js/identifying/identifier_type.js"></script>
-    <script type="text/javascript" src="js/identifying/identifier_svce.js"></script>
-    <script type="text/javascript" src="js/identifying/record_type.js"></script>
-    <script type="text/javascript" src="js/identifying/recorder_type.js"></script>
-    <script type="text/javascript" src="js/identifying/recorder_svce.js"></script>
-    <script type="text/javascript" src="js/common/common_types.js"></script>
-    <script type="text/javascript" src="js/common/common_type.js"></script>
-    <script type="text/javascript" src="js/common/prominstr_type.js"></script>
-    <script type="text/javascript" src="js/common/prominstr_svce.js"></script>
-    <script type="text/javascript" src="js/common/withprominstr_type.js"></script>
-    <script type="text/javascript" src="js/common/common_svce_type.js"></script>
-    <script type="text/javascript" src="js/common/common_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/common/common_svce.js"></script>
-    <script type="text/javascript" src="js/common/common_ctrl.js"></script>
-    <script type="text/javascript" src="js/hitadapter/hitadapter_types.js"></script>
-    <script type="text/javascript" src="js/hitadapter/hitadapter_spring/hitadapter_spring_svce_type.js"></script>
-    <script type="text/javascript" src="js/hitadapter/hitadapter_svce_type.js"></script>
-    <script type="text/javascript" src="js/hitserver/hitserver_types.js"></script>
-    <script type="text/javascript" src="js/hitserver/http_jquery_svce_type.js"></script>
-    <script type="text/javascript" src="js/hitserver/http_angular_svce_type.js"></script>
-    <script type="text/javascript" src="js/hitserver/httpwithupload_angular_svce_type.js"></script>
-    <script type="text/javascript" src="js/hitserver/http_svce.js"></script>
-    <script type="text/javascript" src="js/hitserver/hitserver_report.js"></script>
-    <script type="text/javascript" src="js/hitserver/hitserver_svce_type.js"></script>
-    <script type="text/javascript" src="js/hitserver/hitserver_adapted_svce_type.js"></script>
-    <script type="text/javascript" src="js/hitserver/hitspecified_svce_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/widgetctrls_types.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/action_report.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/widget_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/tabbed_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/converter_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/nested_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/converted_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/hitserverreport_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/hitserverreport_ctrl.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/lastaction_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/lastaction_ctrl.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/actions_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/mastereable_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/grid_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/grid_ctrl.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/candidates_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/candidates_ctrl.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/selector_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/selector_ctrl.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/fields_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/withcandidates_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/editor_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/editor_ctrl.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/creator_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/creator_ctrl.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/arguments_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/arguments_ctrl.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/wirecommon_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/wiregridselection_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/wiregridwithreverse_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/wiregrid2slavegrid_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/wiregrid2editor_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/wiregrid2creator_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/wirecandidates2editor_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/wirearguments2grid_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/composite_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/withlastaction_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/widgetctrls/withtabs_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/roots/apibaseurl_svce.js"></script>
+    <script type="text/javascript" src="app/js/identifying/identifying_types.js"></script>
+    <script type="text/javascript" src="app/js/identifying/identifier_type.js"></script>
+    <script type="text/javascript" src="app/js/identifying/identifier_svce.js"></script>
+    <script type="text/javascript" src="app/js/identifying/record_type.js"></script>
+    <script type="text/javascript" src="app/js/identifying/recorder_type.js"></script>
+    <script type="text/javascript" src="app/js/identifying/recorder_svce.js"></script>
+    <script type="text/javascript" src="app/js/common/common_types.js"></script>
+    <script type="text/javascript" src="app/js/common/common_type.js"></script>
+    <script type="text/javascript" src="app/js/common/prominstr_type.js"></script>
+    <script type="text/javascript" src="app/js/common/prominstr_svce.js"></script>
+    <script type="text/javascript" src="app/js/common/withprominstr_type.js"></script>
+    <script type="text/javascript" src="app/js/common/common_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/common/common_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/common/common_svce.js"></script>
+    <script type="text/javascript" src="app/js/common/common_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/hitadapter/hitadapter_types.js"></script>
+    <script type="text/javascript" src="app/js/hitadapter/hitadapter_spring/hitadapter_spring_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/hitadapter/hitadapter_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/hitserver/hitserver_types.js"></script>
+    <script type="text/javascript" src="app/js/hitserver/http_jquery_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/hitserver/http_angular_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/hitserver/httpwithupload_angular_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/hitserver/http_svce.js"></script>
+    <script type="text/javascript" src="app/js/hitserver/hitserver_report.js"></script>
+    <script type="text/javascript" src="app/js/hitserver/hitserver_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/hitserver/hitserver_adapted_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/hitserver/hitspecified_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/widgetctrls_types.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/action_report.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/widget_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/tabbed_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/converter_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/nested_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/converted_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/hitserverreport_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/hitserverreport_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/lastaction_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/lastaction_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/actions_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/mastereable_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/grid_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/grid_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/candidates_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/candidates_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/selector_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/selector_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/fields_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/withcandidates_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/editor_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/editor_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/creator_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/creator_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/arguments_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/arguments_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/wirecommon_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/wiregridselection_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/wiregridwithreverse_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/wiregrid2slavegrid_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/wiregrid2editor_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/wiregrid2creator_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/wirecandidates2editor_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/wirearguments2grid_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/composite_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/withlastaction_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/widgetctrls/withtabs_ctrl_type.js"></script>
     <!-- END scripts del marco de interfaz de usuario con AngularJS -->
     
     
     <!-- <script layout:include="/layouts/springnut_app_scripts :: springnut_app_scripts_fragment" th:remove="tag"></script> -->
     <!-- BEGIN scripts especificos de la aplicacion springnut  -->
-    <script type="text/javascript" src="js/springnut/cssnames_springnut.js"></script>
-    <script type="text/javascript" src="js/springnut/springnut_types.js"></script>
-    <script type="text/javascript" src="js/springnut/credenciales/credenciales_types.js"></script>
-    <script type="text/javascript" src="js/springnut/credenciales/credenciales_svce_type.js"></script>
-    <script type="text/javascript" src="js/springnut/credenciales/credenciales_svce.js"></script>
-    <script type="text/javascript" src="js/springnut/commonspringnutctrls/commonspringnut_types.js"></script>
-    <script type="text/javascript" src="js/springnut/commonspringnutctrls/commonspringnut_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/springnut/cssnames_springnut.js"></script>
+    <script type="text/javascript" src="app/js/springnut/springnut_types.js"></script>
+    <script type="text/javascript" src="app/js/springnut/credenciales/credenciales_types.js"></script>
+    <script type="text/javascript" src="app/js/springnut/credenciales/credenciales_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/springnut/credenciales/credenciales_svce.js"></script>
+    <script type="text/javascript" src="app/js/springnut/commonspringnutctrls/commonspringnut_types.js"></script>
+    <script type="text/javascript" src="app/js/springnut/commonspringnutctrls/commonspringnut_ctrl_type.js"></script>
     <!-- END scripts especificos de la aplicacion springnut  -->
 
     
     <!-- BEGIN scripts especificos de la pagina de adminoperadores de la aplicacion springnut -->
-    <script type="text/javascript" src="js/springnut/adminoperadores/cssnames_adminoperadores.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_types.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_svce_type.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_ctrl_specs.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_instrumentacion_ctrl_specs.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_instrumentacion_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_operacion_ctrl_specs.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_operacion_ctrl_type.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_svce.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_instrumentacion_ctrl.js"></script>
-    <script type="text/javascript" src="js/springnut/adminoperadores/adminoperadores_operacion_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/cssnames_adminoperadores.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_types.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_svce_type.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_ctrl_specs.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_instrumentacion_ctrl_specs.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_instrumentacion_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_operacion_ctrl_specs.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_operacion_ctrl_type.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_svce.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_instrumentacion_ctrl.js"></script>
+    <script type="text/javascript" src="app/js/springnut/adminoperadores/adminoperadores_operacion_ctrl.js"></script>
     <!-- END scripts especificos de la pagina de adminoperadores de la aplicacion springnut -->
 		
 		
@@ -321,7 +321,7 @@
             
     
             <div class="cssSpringnut_page_header_logo_container">
-                <img class="cssSpringnut_page_header_logo_img" id="img_springnut75" src="harness/images/SpringNut75.png" alt="logo SpringNut" />
+                <img class="cssSpringnut_page_header_logo_img" id="img_springnut75" src="app/harness/images/SpringNut75.png" alt="logo SpringNut" />
             </div>
             <div class="cssSpringnut_page_header_title_container" >
                 <h1 class="cssSpringnut_page_header_title">
@@ -806,7 +806,7 @@
     
     
         <div>
-            <img id="img_mdd300" src="harness/images/MDD_logo_name_300.png" alt="logo Model Driven Development"  />
+            <img id="img_mdd300" src="app/harness/images/MDD_logo_name_300.png" alt="logo Model Driven Development"  />
             <br/>
             <p class="cssSpringnut_copyright_p">
                 Model Driven Development sl - Valencia - Spain
