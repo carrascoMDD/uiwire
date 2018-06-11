@@ -52,7 +52,7 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [
-                    {expand: true, flatten: true,  src: ['app/src/launchapp.html'], dest: 'www/springnut/app', filter: 'isFile'},
+                    {expand: true, flatten: true,  src: ['app/src/index.html'], dest: 'www/springnut/app', filter: 'isFile'},
                     {expand: true, flatten: true,  src: ['app/src/LICENCIA'], dest: 'www/springnut/app', filter: 'isFile'},
                     {expand: true, flatten: true,  src: ['app/src/LICENSE'], dest: 'www/springnut/app', filter: 'isFile'},
 
