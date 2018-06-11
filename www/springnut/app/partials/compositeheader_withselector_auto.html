@@ -1,0 +1,204 @@
+<!--
+*
+* compositeheader_withselector_auto.html
+*
+* Creado @author Antonio Carrasco Valero 201410310128
+*
+***************************************************************************
+
+Copyright 2014 2015 2016 Antonio Carrasco Valero
+uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+* -->
+
+<!-- Composite Header WithSelector BEGIN {{aTabsBarEntry.value}} -->
+
+<h4 x-ng-if="aTabsBarEntry.selectorGridName"
+    class="cssSpringnut_Header" >
+
+
+    <div class="cssSpringnut_TabIcons"  x-ng-include="'partials/tabicons_auto.html'"></div>
+
+    <div class="cssSpringnut_GridIcons" x-ng-include="'partials/gridicons_auto.html'"></div>
+
+
+    <!-- Composite Header WithSelector Tab buttons BEGIN {{aTabsBarEntry.value}} -->
+
+    <button
+            id="{{compositeCtrl._v_DomIdPrefix}}_Grid_{{gridCtrl._v_GridName}}_Button_Refresh"
+            x-ng-if="!gridCtrl._v_NoRefresh && gridCtrl.fAllowRefresh()"
+            x-ng-click="gridCtrl.fUIGridRefreshClickListener()"
+            type="button"
+            name="refresh"
+            value=""
+            class="cssSpringnut_Button cssSpringnut_EditorRefreshButton"
+            x-UNUSED-title="Vuelve a leer y presentar los datos">
+        <i class="icon-refresh icon-white"></i>&nbsp;Refrescar
+    </button>
+    <button
+            id="{{compositeCtrl._v_DomIdPrefix}}_Grid_{{gridCtrl._v_GridName}}_Button_Create"
+            x-ng-if="gridCtrl._v_CreatorName && gridCtrl._v_HasAnyCreateRoles && gridCtrl.fAllowCreation()"
+            x-ng-click="gridCtrl.fUICreateClickListener()"
+            type="button"
+            name="create"
+            value=""
+            class="cssSpringnut_Button cssSpringnut_CreateButton"
+            x-UNUSED-title="Crea un nuevo registro">
+        <i class="icon-plus icon-white"></i>&nbsp;Crear
+    </button>
+    <!-- Composite Header WithSelector Tab buttons END {{aTabsBarEntry.value}} -->
+
+
+
+
+    <!-- Composite Header WithSelector Label BEGIN {{aTabsBarEntry.value}} -->
+    <span
+            x-ng-if="!gridCtrl._v_RetrievalTarget"
+            class="cssSpringnut_CompositeLabel">
+
+        <!-- Composite Header WithSelector Label WithMaster BEGIN {{aTabsBarEntry.value}} -->
+
+        <span
+            x-ng-if="!gridCtrl._v_MasterFields"
+            id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_NoMasterSelection_Message"
+            x-ng-click="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_SelectorShown = true"
+            x-ng-bind="'Seleccione ' + gridCtrl._v_MasterType"></span>
+
+        <span x-ng-if="gridCtrl._v_EverRetrieved">
+             <span
+                 x-ng-include="'partials/gridlength_auto.html'"
+                 class="cssSpringnut_GridLengthContainer"></span>
+        </span>
+
+        <span x-ng-if="!gridCtrl._v_EverRetrieved">
+             <span
+                 x-ng-include="'partials/gridlength_justpagemaxsize_auto.html'"
+                 class="cssSpringnut_GridLengthContainer"></span>
+        </span>
+
+        <span
+            x-ng-if="gridCtrl._v_MasterFields"
+            style="cursor:pointer;cursor:hand"
+            x-ng-click="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_SelectorShown = true"
+            id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_Span_Label"
+            x-ng-bind="aTabsBarEntry.label"></span>
+
+         <span
+             x-ng-if="gridCtrl._v_MasterLabel"
+             style="cursor:pointer;cursor:hand"
+             x-ng-click="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_SelectorShown = true"
+             id="{{compositeCtrl._v_DomIdPrefix}}_Grid_{{gridCtrl._v_GridName}}_Span_MasterLabel"
+             x-ng-bind="gridCtrl._v_MasterLabel"></span>
+
+        <span
+            style="cursor:pointer;cursor:hand"
+            x-ng-if="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_Selection[ compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_KeyField]"
+            x-ng-click="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_SelectorShown = true">
+            {{compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_Selection[ compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_KeyField]}}
+        </span>
+        <!-- Composite Header WithSelector Label WithMaster END {{aTabsBarEntry.value}} -->
+    </span>
+
+
+
+
+
+    <!-- ACV OJO 201410310359 Only case of Grid with Selector but no masterType spec property is ValidacionesDeCriterio in Edivalidaciones Operacion
+    which also has in the spec its own retrievalTarget and therefore may feed itself automatically with a refresh
+    -->
+
+
+
+
+    <!-- Composite Header WithSelector Label BEGIN {{aTabsBarEntry.value}} -->
+    <span
+            x-ng-if="gridCtrl._v_RetrievalTarget"
+            class="cssSpringnut_CompositeLabel">
+
+        <!-- Composite Header WithSelector Label WithMaster BEGIN {{aTabsBarEntry.value}} -->
+
+        <span
+             x-ng-if="!gridCtrl._v_EverRetrieved"
+             x-ng-click="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_SelectorShown = true"
+             id="{{compositeCtrl._v_DomIdPrefix}}_Grid_{{gridCtrl._v_GridName}}_Span_MayRefreshMessage"
+             x-ng-bind="'Pulse refrescar para ver ' + gridCtrl._v_GridLabel"></span>
+
+        <span
+            x-ng-if="!gridCtrl._v_MasterFields && !gridCtrl._v_Rows.length"
+            id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_NoMasterSelection_Message"
+            x-ng-click="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_SelectorShown = true"
+            x-ng-bind="'Seleccione ' + gridCtrl._v_MasterType"></span>
+
+        <span x-ng-if="gridCtrl._v_EverRetrieved">
+             <span
+                 x-ng-include="'partials/gridlength_auto.html'"
+                 class="cssSpringnut_GridLengthContainer"></span>
+        </span>
+
+        <span x-ng-if="!gridCtrl._v_EverRetrieved">
+             <span
+                     x-ng-include="'partials/gridlength_justpagemaxsize_auto.html'"
+                     class="cssSpringnut_GridLengthContainer"></span>
+        </span>
+
+        <span
+            x-ng-if="gridCtrl._v_EverRetrieved"
+            style="cursor:pointer;cursor:hand"
+            x-ng-click="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_SelectorShown = true"
+            id="{{compositeCtrl._v_TabsTopCtrl._v_TabDomIdPrefix}}_{{aTabsBarEntry.value}}_Span_Label"
+            x-ng-bind="aTabsBarEntry.label"></span>
+
+         <span
+             x-ng-if="gridCtrl._v_MasterLabel"
+             style="cursor:pointer;cursor:hand"
+             x-ng-click="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_SelectorShown = true"
+             id="{{compositeCtrl._v_DomIdPrefix}}_Grid_{{gridCtrl._v_GridName}}_Span_MasterLabel"
+             x-ng-bind="gridCtrl._v_MasterLabel"></span>
+
+        <span
+            style="cursor:pointer;cursor:hand"
+            x-ng-if="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_Selection[ compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_KeyField]"
+            x-ng-click="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_SelectorShown = true">
+            {{compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_Selection[ compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_keyField]}}
+        </span>
+        <!-- Composite Header WithSelector Label WithMaster END {{aTabsBarEntry.value}} -->
+    </span>
+
+    <!-- Composite Header WithSelector Label END {{aTabsBarEntry.value}} -->
+
+
+
+    <!-- Composite Header WithSelector Right Buttons BEGIN {{aTabsBarEntry.value}} -->
+    <button
+            id="{{compositeCtrl._v_DomIdPrefix}}_Grid_{{aTabsBarEntry.value}}_Button_OpenSelector"
+            x-ng-click="compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_SelectorShown = true"
+            type="button"
+            name="openSelector"
+            value=""
+            class="cssSpringnut_Button cssSpringnut_OpenSelectorButton"
+            x-UNUSED-title="Abre la lista de selección">
+        <i class="icon-star icon-white"></i>Seleccionar {{compositeCtrl.fGridCtrlNamed( aTabsBarEntry.selectorGridName)._v_GridLabel}}
+    </button>
+    <!-- Composite Header WithSelector Right Buttons END {{aTabsBarEntry.value}} -->
+</h4>
+
+<!-- Composite Header WithSelector END {{aTabsBarEntry.value}} -->

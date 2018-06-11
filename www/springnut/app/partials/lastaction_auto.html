@@ -1,0 +1,86 @@
+<!--
+*
+* lastaction_auto.html
+*
+* Creado @author Antonio Carrasco Valero 201410240057
+*
+***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+*
+* -->
+
+
+
+<div x-ng-if="lastActionCtrl._v_LastActionReport && lastActionCtrl._v_LastActionReport._v_Performed"
+    class="cssSpringnut_LastAction_div"
+    id="{{lastActionCtrl._v_DomIdPrefix}}_LastAction_Div">
+
+
+    <div class="cssSpringnut_LastAction_ActionReport_div"
+         id="{{lastActionCtrl._v_DomIdPrefix}}_LastAction_ActionReport_Div">
+
+
+        <div x-ng-if="lastActionCtrl._v_LastActionReport._v_Success"
+             class="cssSpringnut_LastAction_ActionReport_Success_div"
+             id="{{lastActionCtrl._v_DomIdPrefix}}_LastAction_ActionReport_Success_Div">
+
+            <span class="{{lastActionCtrl._v_DomIdPrefix}}_LastAction_ActionReport_Success_Span"
+                  id="cssSpringnut_LastAction_ActionReport_Success_span">ÉXITO</span>
+
+            <span x-ng-if="lastActionCtrl._v_MainMessage"
+                  class="{{lastActionCtrl._v_DomIdPrefix}}_LastAction_ActionReport_MainMessage_Span"
+                  id="cssSpringnut_LastAction_ActionReport_Success_MainMessage_span"
+                  x-ng-bind="lastActionCtrl._v_MainMessage"></span>
+        </div>
+
+
+        <div x-ng-if="!lastActionCtrl._v_LastActionReport._v_Success"
+             class="cssSpringnut_LastAction_ActionReport_Failure_div"
+             id="{{lastActionCtrl._v_DomIdPrefix}}_LastAction_ActionReport_Failure_Div">
+
+            <span class="{{lastActionCtrl._v_DomIdPrefix}}_LastAction_ActionReport_Failure_Span"
+                  id="cssSpringnut_LastAction_ActionReport_Failure_span">FALLO</span>
+
+            <span x-ng-if="lastActionCtrl._v_MainMessage"
+                  class="{{lastActionCtrl._v_DomIdPrefix}}_LastAction_ActionReport_FailureMessage_Span"
+                  id="cssSpringnut_LastAction_ActionReport_Failure_MainMessage_span"
+                  x-ng-bind="lastActionCtrl._v_MainMessage"></span>
+
+            <div x-ng-if="lastActionCtrl._v_LastActionReport._v_HitServerReport"
+                 class="cssSpringnut_LastAction_Failure_HitServerReport_Container"
+                 id="{{lastActionCtrl._v_DomIdPrefix}}_LastAction_ActionReport_HitServerReport_IfDiv">
+
+                <div
+                    id="{{lastActionCtrl._v_DomIdPrefix}}_LastAction_ActionReport_HitServerReport_Includer"
+                    class="cssSpringnut_LastAction_HitServerReport_Includer"
+                    x-ng-controller="HitServerReportCtrl"
+                    x-ng-init="hitServerReportCtrl.pRegisterHitServerReportCtrlInOwner( lastActionCtrl)"
+                    x-ng-include="'partials/hitserverreport_auto.html'"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

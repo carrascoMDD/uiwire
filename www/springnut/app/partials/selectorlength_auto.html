@@ -1,0 +1,108 @@
+<!--
+*
+* gridlength_auto.html
+*
+* Creado @author Antonio Carrasco Valero 201503160154
+*
+***************************************************************************
+
+Copyright 2014 2015 2016 Antonio Carrasco Valero
+uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+* -->
+
+<!-- GridLength BEGIN {{aTabsBarEntry.value}} -->
+<span
+    x-ng-include="'partials/gridlength_justpagemaxsize_auto.html'"
+    class="cssSpringnut_GridLengthContainer"></span><span
+
+    x-ng-if="!selectorCtrl._v_Paging"
+    id="{{compositeCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Span_Length_Container"
+    class="cssSpringnut_GridLengthContainerSpan">
+
+    <span
+        id="{{compositeCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Span_Length"
+        x-ng-bind="selectorCtrl._v_Rows.length || 0"
+        class="cssSpringnut_GridLengthSpan"></span>
+</span><span
+
+    x-ng-if="selectorCtrl._v_Paging"
+    id="{{compositeCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Span_Length_Container"
+    class="cssSpringnut_GridLengthContainerSpan"><button
+
+        id="{{compositeCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Button_Length_First"
+        x-ng-click="(( selectorCtrl._v_PageFirstRowIndex || 0) > 0) && selectorCtrl.fUIGridFirstClickListener()"
+        type="button"
+        name="refresh"
+        value=""
+        x-ng-disabled="!(( selectorCtrl._v_PageFirstRowIndex || 0) > 0)"
+        class="cssSpringnut_Button cssSpringnut_GridPagingButton"
+        x-UNUSED-title="Presentar los datos de la primera pagina"><i
+
+        class="icon-fast-backward" x-ng-if="( selectorCtrl._v_PageFirstRowIndex || 0) > 0"></i><i
+
+        class="icon-fast-backward icon-white" x-ng-if="!(( selectorCtrl._v_PageFirstRowIndex || 0) > 0)"></i></button><button
+
+        id="{{compositeCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Button_Length_Previous"
+        x-ng-disabled="!(( selectorCtrl._v_PageFirstRowIndex || 0) > 0)"
+        x-ng-click="(( selectorCtrl._v_PageFirstRowIndex || 0) > 0) && selectorCtrl.fUIGridPreviousClickListener()"
+        type="button"
+        name="refresh"
+        value=""
+        class="cssSpringnut_Button cssSpringnut_GridPagingButton"
+        x-UNUSED-title="Presentar los datos de la pagina anterior"><i
+
+        class="icon-backward" x-ng-if="( selectorCtrl._v_PageFirstRowIndex || 0) > 0"></i><i
+
+        class="icon-backward icon-white" x-ng-if="!(( selectorCtrl._v_PageFirstRowIndex || 0) > 0)"></i></button><button
+
+        id="{{compositeCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Button_Length_Next"
+        x-ng-disabled="!(( selectorCtrl._v_PageLastRowIndex || 0) < ( selectorCtrl._v_Rows.length || 0))"
+        x-ng-click="(( selectorCtrl._v_PageLastRowIndex || 0) < ( selectorCtrl._v_Rows.length || 0)) && selectorCtrl.fUIGridNextClickListener()"
+        type="button"
+        name="refresh"
+        value=""
+        class="cssSpringnut_Button cssSpringnut_GridPagingButton"
+        x-UNUSED-title="Presentar los datos desde la pagina siguiente"><i
+
+        class="icon-play" x-ng-if="( selectorCtrl._v_PageLastRowIndex || 0) < ( selectorCtrl._v_Rows.length || 0)"></i><i
+
+        class="icon-play icon-white" x-ng-if="!(( selectorCtrl._v_PageLastRowIndex || 0) < ( selectorCtrl._v_Rows.length || 0))"></i></button><button
+
+        id="{{compositeCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Button_Length_Last"
+        x-ng-disabled="( selectorCtrl._v_PageFirstRowIndex || 0) == ( ( selectorCtrl._v_Rows.length || 0) - ( selectorCtrl._v_PageMaxSize || 0))"
+        x-ng-click="!(( selectorCtrl._v_PageFirstRowIndex || 0) == ( ( selectorCtrl._v_Rows.length || 0) - ( selectorCtrl._v_PageMaxSize || 0))) && selectorCtrl.fUIGridLastClickListener()"
+        type="button"
+        name="refresh"
+        value=""
+        class="cssSpringnut_Button cssSpringnut_GridPagingButton"
+        x-UNUSED-title="Presentar los datos de la ultima pagina"><i
+
+        class="icon-fast-forward" x-ng-if="!(( selectorCtrl._v_PageFirstRowIndex || 0) == ( ( selectorCtrl._v_Rows.length || 0) - ( selectorCtrl._v_PageMaxSize || 0)))"></i><i
+
+        class="icon-fast-forward icon-white" x-ng-if="( selectorCtrl._v_PageFirstRowIndex || 0) == ( ( selectorCtrl._v_Rows.length || 0) - ( selectorCtrl._v_PageMaxSize || 0))"></i></button><span
+
+        id="{{compositeCtrl._v_DomIdPrefix}}_Selector_{{selectorCtrl._v_GridName}}_Span_Length"
+        x-ng-bind="(( selectorCtrl._v_PageFirstRowIndex || 0) + 1) +  ' a ' + (( selectorCtrl._v_PageLastRowIndex || 0) + 1) + ' de ' + ( selectorCtrl._v_Rows.length || 0)"
+        class="cssSpringnut_GridLengthSpan"></span></span>
+
+<!-- GridLength END {{aTabsBarEntry.value}} -->

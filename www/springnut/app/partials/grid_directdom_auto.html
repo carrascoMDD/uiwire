@@ -1,0 +1,103 @@
+<!--
+*
+* grid_auto.html
+*
+* Creado @author Antonio Carrasco Valero 201410030747
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+*
+* -->
+
+<!-- Grid BEGIN {{aTabsBarEntry.value}} -->
+
+
+<!-- Grid Progress BEGIN {{aTabsBarEntry.value}} -->
+<div class="cssSpringnut_Progress cssSpringnut_Progress_Grid"
+     x-ng-if="gridCtrl._v_Leyendo">
+    ...Leyendo ...
+</div>
+
+<div class="cssSpringnut_Progress cssSpringnut_Progress_Grid"
+     x-ng-if="gridCtrl._v_Rows && gridCtrl._v_Rows.length && !( gridCtrl._v_CellValuesCache && gridCtrl._v_CellValuesCache.length)">
+    ...Cargando ...
+</div>
+
+<div class="cssSpringnut_Progress cssSpringnut_Progress_Grid"
+     x-ng-if="!( gridCtrl._v_Rows && gridCtrl._v_Rows.length) && ( gridCtrl._v_CellValuesCache && gridCtrl._v_CellValuesCache.length)">
+    ...Descargando ...
+</div>
+<!-- Grid Progress END {{aTabsBarEntry.value}} -->
+
+
+<div x-ng-if="gridCtrl.fIsGridRendered()">
+
+    <!-- Grid Headers Table BEGIN {{aTabsBarEntry.value}} -->
+    <div bindonce >
+        <table
+                bo-id="gridCtrl._v_DomIdPrefix + '_Grid_' + gridCtrl._v_GridName + '_HeadersTable'"
+                bo-class="gridCtrl._v_GridClasses.Table">
+
+            <thead>
+            <tr
+                    bo-id="gridCtrl._v_DomIdPrefix + '_Grid_' + gridCtrl._v_GridName + '_HeaderRow'"
+                    bo-class="gridCtrl._v_GridClasses.HeaderRow" >
+
+                <th
+                        bo-id="gridCtrl._v_DomIdPrefix + '_Grid_' + gridCtrl._v_GridName + '_HeaderRow_Col_' + aColumnIndex"
+                        align="center"
+                        bindonce="gridCtrl._v_HeaderCellCssCache[ aColumnIndex]"
+                        bo-class="gridCtrl._v_HeaderCellCssCache[ aColumnIndex]"
+
+                        x-ng-repeat="(aColumnIndex,aColumnLabel) in gridCtrl._v_Labels">
+
+                        <span
+                                bo-id="gridCtrl._v_DomIdPrefix + '_Grid_' + gridCtrl._v_GridName + '_HeaderRow_Col_' + aColumnIndex + '_Span'"
+                                bo-class="gridCtrl._v_GridClasses.HeaderSpan"
+
+                                bo-text="aColumnLabel" ></span>
+                </th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <!-- Grid Headers Table END {{aTabsBarEntry.value}} -->
+
+
+
+    <!-- Grid Table BEGIN {{aTabsBarEntry.value}} -->
+    <div
+            bindonce
+
+            bo-id="gridCtrl._v_DomIdPrefix + '_Grid_' + gridCtrl._v_GridName"
+
+            x-ng-show="gridCtrl._v_Rows && gridCtrl._v_Rows.length"
+            x-bo-class="gridCtrl._v_GridClasses.TableContainer"  >
+
+    </div>
+    <!-- Grid Table END {{aTabsBarEntry.value}} -->
+
+</div>
+
+<!-- Grid END {{aTabsBarEntry.value}} -->

@@ -32,6 +32,7 @@ permissions and limitations under the Licence.
 </head>
 <body layout:fragment="springnut_page_user_messages">
 
+    <!-- BEGIN user_messages  -->
 	<div id="page_user_messages" layout:fragment="user_messages">
 		<div th:each="mensaje : ${mensaje_usuario_error}" th:if="${mensaje_usuario_error}" class="alert alert-error" th:inline="text">
 			<button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -46,6 +47,7 @@ permissions and limitations under the Licence.
 			[[${mensaje}]]
 		</div>
 	</div>
+    <!-- END user_messages  -->
 
 </body>
 </html>

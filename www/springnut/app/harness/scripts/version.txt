@@ -1,0 +1,4 @@
+jquery.js --> 1.9.1
+jquery.dataTables.js --> 1.9.4
+jquery-ui.custom.js --> 1.10.2
+jquery-validation.js --> 1.11.1

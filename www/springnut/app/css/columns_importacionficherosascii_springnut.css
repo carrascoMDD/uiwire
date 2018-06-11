@@ -1,0 +1,118 @@
+/*
+*
+* columns_importacionficherosascii_springnut.css
+*
+* Creado @author Antonio Carrasco Valero 201411280103
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Utiliza uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+ Licensed under the EUPL, Version 1.1 only (the "Licence"); You may not use this work except in compliance with the Licence. You may obtain a copy of the Licence at: https://joinup.ec.europa.eu/software/page/eupl/licence-eupl Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+*
+*/
+
+
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrIdtrabajo,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrIdtrabajo  {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_IfaTipoboletin,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_IfaTipoboletin  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_IfaAno,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_IfaAno  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_IfaMes,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_IfaMes  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_IfaProvincia,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_IfaProvincia  {
+    width: 52px;
+    min-width: 52px;
+    max-width: 52px;
+    text-align: left;
+}
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrFechaStr,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrFechaStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrFechaultimaStr,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrFechaultimaStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrEstado,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrEstado  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrExitoLabel,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrExitoLabel  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrEstadoejecucion,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrEstadoejecucion  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrNombrepaso,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrNombrepaso  {
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+    text-align: left;
+}
+
+td.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrCausaerrorLabel,
+th.cssSpringnut_Importacionficherosascii_ListaImportacionesficherosascii_TrCausaerrorLabel {
+    width: 100%;
+    text-align: left;
+}

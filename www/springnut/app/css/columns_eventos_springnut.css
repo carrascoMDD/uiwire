@@ -1,0 +1,891 @@
+/*
+*
+* columns_eventos_springnut.css
+*
+* Creado @author Antonio Carrasco Valero 201503030557
+*
+ ***************************************************************************
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Utiliza uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+ Licensed under the EUPL, Version 1.1 only (the "Licence"); You may not use this work except in compliance with the Licence. You may obtain a copy of the Licence at: https://joinup.ec.europa.eu/software/page/eupl/licence-eupl Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+ *
+ */
+
+
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_IdExcepcion,
+th.cssSpringnut_Eventos_ListaExcepciones_IdExcepcion  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_TimestampStr,
+th.cssSpringnut_Eventos_ListaExcepciones_TimestampStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_DateStr,
+th.cssSpringnut_Eventos_ListaExcepciones_DateStr  {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaExcepciones_DePrueba,
+th.cssSpringnut_Eventos_ListaExcepciones_DePrueba  {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaExcepciones_ClassName,
+th.cssSpringnut_Eventos_ListaExcepciones_ClassName  {
+    width: 240px;
+    min-width: 240px;
+    max-width: 240px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_ClassSimpleName,
+th.cssSpringnut_Eventos_ListaExcepciones_ClassSimpleName  {
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaExcepciones_IdOperador,
+th.cssSpringnut_Eventos_ListaExcepciones_IdOperador  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_NombreOperador,
+th.cssSpringnut_Eventos_ListaExcepciones_NombreOperador  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaExcepciones_IpOperador,
+th.cssSpringnut_Eventos_ListaExcepciones_IpOperador  {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaExcepciones_UserAgent,
+th.cssSpringnut_Eventos_ListaExcepciones_UserAgent  {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaExcepciones_HttpMethod,
+th.cssSpringnut_Eventos_ListaExcepciones_HttpMethod  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaExcepciones_RutaSolicitada,
+th.cssSpringnut_Eventos_ListaExcepciones_RutaSolicitada  {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_IdTrabajo,
+th.cssSpringnut_Eventos_ListaExcepciones_IdTrabajo  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_TipoTrabajo,
+th.cssSpringnut_Eventos_ListaExcepciones_TipoTrabajo  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_NestingLevel,
+th.cssSpringnut_Eventos_ListaExcepciones_NestingLevel  {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_Message,
+th.cssSpringnut_Eventos_ListaExcepciones_Message  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_LocalizedMessage,
+th.cssSpringnut_Eventos_ListaExcepciones_LocalizedMessage  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_Eventos_ListaExcepciones_NestingLevel,
+th.cssSpringnut_Eventos_ListaExcepciones_NestingLevel  {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    text-align: left;
+}
+
+
+
+
+
+
+td.cssSpringnut_Eventos_ListaCausasExcepcion_NestingLevel,
+th.cssSpringnut_Eventos_ListaCausasExcepcion_NestingLevel  {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaCausasExcepcion_ClassName,
+th.cssSpringnut_Eventos_ListaCausasExcepcion_ClassName  {
+    width: 240px;
+    min-width: 240px;
+    max-width: 240px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaCausasExcepcion_ClassSimpleName,
+th.cssSpringnut_Eventos_ListaCausasExcepcion_ClassSimpleName  {
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaCausasExcepcion_Message,
+th.cssSpringnut_Eventos_ListaCausasExcepcion_Message  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaCausasExcepcion_LocalizedMessage,
+th.cssSpringnut_Eventos_ListaCausasExcepcion_LocalizedMessage  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+td.cssSpringnut_Eventos_ListaPila_DeclaringClass,
+th.cssSpringnut_Eventos_ListaPila_DeclaringClass  {
+    width: 65%;
+    min-width: 65%;
+    max-width: 65%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaPila_MethodName,
+th.cssSpringnut_Eventos_ListaPila_MethodName  {
+    width: 45%;
+    min-width: 45%;
+    max-width: 45%;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_Eventos_ListaPila_FileName,
+th.cssSpringnut_Eventos_ListaPila_FileName  {
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_Eventos_ListaPila_LineNumber,
+th.cssSpringnut_Eventos_ListaPila_LineNumber  {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaPila_IsNativeMethod,
+th.cssSpringnut_Eventos_ListaPila_IsNativeMethod  {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+td.cssSpringnut_Eventos_ListaAccesosoperadores_IdAcceso,
+th.cssSpringnut_Eventos_ListaAccesosoperadores_IdAcceso  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosoperadores_FechaStr,
+th.cssSpringnut_Eventos_ListaAccesosoperadores_FechaStr  {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosoperadores_FechaHoraStr,
+th.cssSpringnut_Eventos_ListaAccesosoperadores_FechaHoraStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosoperadores_IdOperador,
+th.cssSpringnut_Eventos_ListaAccesosoperadores_IdOperador  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosoperadores_NombreOperador,
+th.cssSpringnut_Eventos_ListaAccesosoperadores_NombreOperador  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosoperadores_PerfilesOperador,
+th.cssSpringnut_Eventos_ListaAccesosoperadores_PerfilesOperador  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosoperadores_IpOperador,
+th.cssSpringnut_Eventos_ListaAccesosoperadores_IpOperador  {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaAccesosoperadores_UserAgent,
+th.cssSpringnut_Eventos_ListaAccesosoperadores_UserAgent  {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+td.cssSpringnut_Eventos_ListaAccesosfallidos_IdAcceso,
+th.cssSpringnut_Eventos_ListaAccesosfallidos_IdAcceso  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosfallidos_FechaStr,
+th.cssSpringnut_Eventos_ListaAccesosfallidos_FechaStr  {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosfallidos_FechaHoraStr,
+th.cssSpringnut_Eventos_ListaAccesosfallidos_FechaHoraStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosfallidos_IdOperador,
+th.cssSpringnut_Eventos_ListaAccesosfallidos_IdOperador  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosfallidos_NombreOperador,
+th.cssSpringnut_Eventos_ListaAccesosfallidos_NombreOperador  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosfallidos_ModoFallo,
+th.cssSpringnut_Eventos_ListaAccesosfallidos_ModoFallo  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaAccesosfallidos_IpOperador,
+th.cssSpringnut_Eventos_ListaAccesosfallidos_IpOperador  {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaAccesosfallidos_UserAgent,
+th.cssSpringnut_Eventos_ListaAccesosfallidos_UserAgent  {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_IdLectura,
+th.cssSpringnut_Eventos_ListaLecturasboletines_IdLectura  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_DateStr,
+th.cssSpringnut_Eventos_ListaLecturasboletines_DateStr  {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_TimestampStr,
+th.cssSpringnut_Eventos_ListaLecturasboletines_TimestampStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_TipoBoletin,
+th.cssSpringnut_Eventos_ListaLecturasboletines_TipoBoletin  {
+    width: 54px;
+    min-width: 54px;
+    max-width: 54px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_IdFichero,
+th.cssSpringnut_Eventos_ListaLecturasboletines_IdFichero  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_AnoFichero,
+th.cssSpringnut_Eventos_ListaLecturasboletines_AnoFichero  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_MesFichero,
+th.cssSpringnut_Eventos_ListaLecturasboletines_MesFichero  {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_CodigoProvinciaFichero,
+th.cssSpringnut_Eventos_ListaLecturasboletines_CodigoProvinciaFichero  {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_IdBoletin,
+th.cssSpringnut_Eventos_ListaLecturasboletines_IdBoletin  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_IdCodBoletin,
+th.cssSpringnut_Eventos_ListaLecturasboletines_IdCodBoletin  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_IdLitBoletin,
+th.cssSpringnut_Eventos_ListaLecturasboletines_IdLitBoletin  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_IdImageBoletin,
+th.cssSpringnut_Eventos_ListaLecturasboletines_IdImageBoletin  {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_Nbol,
+th.cssSpringnut_Eventos_ListaLecturasboletines_Nbol  {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_Identifica,
+th.cssSpringnut_Eventos_ListaLecturasboletines_Identifica  {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_ModoFallo,
+th.cssSpringnut_Eventos_ListaLecturasboletines_ModoFallo  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_LeeImagen,
+th.cssSpringnut_Eventos_ListaLecturasboletines_LeeImagen  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_DePrueba,
+th.cssSpringnut_Eventos_ListaLecturasboletines_DePrueba  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_HttpMethod,
+th.cssSpringnut_Eventos_ListaLecturasboletines_HttpMethod  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_RutaSolicitada,
+th.cssSpringnut_Eventos_ListaLecturasboletines_RutaSolicitada  {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_IpOperador,
+th.cssSpringnut_Eventos_ListaLecturasboletines_IpOperador  {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_UserAgent,
+th.cssSpringnut_Eventos_ListaLecturasboletines_UserAgent  {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    text-align: left;
+}
+
+
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_IdTrabajo,
+th.cssSpringnut_Eventos_ListaLecturasboletines_IdTrabajo  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_TipoTrabajo,
+th.cssSpringnut_Eventos_ListaLecturasboletines_TipoTrabajo  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_IdOperador,
+th.cssSpringnut_Eventos_ListaLecturasboletines_IdOperador  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_NombreOperador,
+th.cssSpringnut_Eventos_ListaLecturasboletines_NombreOperador  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaLecturasboletines_PerfilesOperador,
+th.cssSpringnut_Eventos_ListaLecturasboletines_PerfilesOperador  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+td.cssSpringnut_Eventos_ListaCambios_IdCambio,
+th.cssSpringnut_Eventos_ListaCambios_IdCambio  {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaCambios_DateStr,
+th.cssSpringnut_Eventos_ListaCambios_DateStr  {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaCambios_TimestampStr,
+th.cssSpringnut_Eventos_ListaCambios_TimestampStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_Eventos_ListaCambios_IdOperador,
+th.cssSpringnut_Eventos_ListaCambios_IdOperador  {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaCambios_NombreOperador,
+th.cssSpringnut_Eventos_ListaCambios_NombreOperador  {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_Eventos_ListaCambios_HttpMethod,
+th.cssSpringnut_Eventos_ListaCambios_HttpMethod  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaCambios_IpOperador,
+th.cssSpringnut_Eventos_ListaCambios_IpOperador  {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaCambios_UserAgent,
+th.cssSpringnut_Eventos_ListaCambios_UserAgent  {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    text-align: left;
+}
+
+td.cssSpringnut_Eventos_ListaCambios_TiposCambiados,
+th.cssSpringnut_Eventos_ListaCambios_TiposCambiados  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaCambios_RutaSolicitada,
+th.cssSpringnut_Eventos_ListaCambios_RutaSolicitada  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaCambios_PerfilesOperador,
+th.cssSpringnut_Eventos_ListaCambios_PerfilesOperador  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+td.cssSpringnut_Eventos_ListaEntidadesDeCambio_Id,
+th.cssSpringnut_Eventos_ListaEntidadesDeCambio_Id  {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaEntidadesDeCambio_IdCambio,
+th.cssSpringnut_Eventos_ListaEntidadesDeCambio_IdCambio  {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaEntidadesDeCambio_DateStr,
+th.cssSpringnut_Eventos_ListaEntidadesDeCambio_DateStr  {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaEntidadesDeCambio_TimestampStr,
+th.cssSpringnut_Eventos_ListaEntidadesDeCambio_TimestampStr  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_Eventos_ListaEntidadesDeCambio_TipoRev,
+th.cssSpringnut_Eventos_ListaEntidadesDeCambio_TipoRev  {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaEntidadesDeCambio_Identidad,
+th.cssSpringnut_Eventos_ListaEntidadesDeCambio_Identidad  {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaEntidadesDeCambio_Tipoentidad,
+th.cssSpringnut_Eventos_ListaEntidadesDeCambio_Tipoentidad  {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: left;
+}
+
+
+
+td.cssSpringnut_Eventos_ListaEntidadesDeCambio_Claves,
+th.cssSpringnut_Eventos_ListaEntidadesDeCambio_Claves  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+td.cssSpringnut_Eventos_ListaEntidadesDeCambio_InformeCampos,
+th.cssSpringnut_Eventos_ListaEntidadesDeCambio_InformeCampos  {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+
+
+
