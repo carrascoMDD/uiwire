@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	  layout:decorator="@{layouts/default}">
+
+
+<head>
+	<!-- ************************************
+    auxhasrole.html
+    Creado 201502021329
+
+    Autor prgdev01
+
+    -->
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+	<link layout:include="/layouts/springnut_styles :: springnut_styles_fragment" th:remove="tag"></link>
+
+	<link rel="stylesheet" type="text/css" media="all" href="../styles/springnut_autorizado_styles.css"   th:href="@{/resources/styles/springnut_autorizado_styles.css}" />
+
+
+
+	<script layout:include="/layouts/springnut_scripts :: springnut_scripts_fragment" th:remove="tag"></script>
+
+
+	<title>AUTORIZADO</title>
+
+</head>
+
+<body>
+	<div class="cssSpringnut_container">
+
+		<h1 layout:fragment="tit_page" class="cssSpringnut_page_header_tit_page cssSpringnut_page_header_tit_page_autorizado">AUTORIZADO</h1>
+
+		<div id="page_content" layout:fragment="content">
+
+			<div class="cssSpringnut_content">
+
+				<input type="hidden" name="AppBaseURLfld" id="did_AppBaseURLfld" value="" th:value="@{/}" />
+
+
+
+				<div class="cssSpringnut_autorizado_div"  >
+
+					<h3 class="cssSpringnut_autorizado_title">
+						<span  id="did_autorizado_message" >
+							OPERADOR AUTORIZADO PARA LA ACCIÓN SOLICITADA
+						</span>
+					</h3>
+				</div>
+
+
+
+				<div id="autorizado_rutasolicitada"  class="cssSpringnut_autorizado_rutasolicitada">
+
+					<span id="did_httpMethod_span"    class="cssSpringnut_autorizado_rutasolicitada" th:text="${httpMethod}" />
+					<span id="did_rutaSolicitud_span" class="cssSpringnut_autorizado_rutasolicitada" th:text="${rutaSolicitud}" />
+				</div>
+
+
+
+			</div>
+	
+			<br/>
+
+
+		</div>
+
+		<div id="page_footer"></div>
+
+	</div>
+
+</body>
+</html>
+
+
+

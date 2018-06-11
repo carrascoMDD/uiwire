@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+	
+	<!-- ************************************
+	exception.html
+	Creado 201502271942
+	
+
+ Copyright 2014 2015 2016 Antonio Carrasco Valero
+ Utiliza uiwire asynchronous user interface written by Antonio Carrasco Valero in Javascript with AngularJS and licensed under EUPL  http://www.uiwire.org
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+	-->
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	
+	
+	
+	<body layout:fragment="excepcion_fragment">
+
+
+        <h4 class="cssSpringnut_excepcion_class" th:if="${theExcepcionJSONHere.vClassName}">
+            <span th:id="${'did_excepcionJSON_vClassName_' + theExcepcionJSONHere.vNestingLevel}"  th:text="${theExcepcionJSONHere.vClassName}" />
+        </h4>
+
+		<p class="cssSpringnut_excepcion_message"
+		   th:if="${theExcepcionJSONHere.vMessage} or (${(theExcepcionJSONHere.vLocalizedMessage.length() gt 0) and not ( theExcepcionJSONHere.vLocalizedMessage eq theExcepcionJSONHere.vMessage)})">
+			<span th:id="${'did_excepcionJSON_vMessage_' + theExcepcionJSONHere.vNestingLevel}"  th:text="${theExcepcionJSONHere.vMessage}" />
+			<span th:id="${'did_excepcionJSON_vLocalizedMessage_' + theExcepcionJSONHere.vNestingLevel}" th:text="${theExcepcionJSONHere.vLocalizedMessage}" />
+		</p>
+
+        
+        
+        <div class="cssSpringnut_ExcepcionJSON_textarea_and_table"
+			 sec:authorize="${hasAnyRole( 'ROLE_DEMO', 'ROLE_AVANZADO', 'ROLE_INSTALADOR', 'ROLE_ADMINISTRADOR', 'ROLE_CODIFICADOR', 'ROLE_GRABADOR')}" >
+
+			<div class="cssSpringnut_ExcepcionJSON_textarea_container">
+				<textarea class="cssSpringnut_ExcepcionJSON_textarea"
+						  th:if="${theExcepcionJSONHere.vInformeExcepcion}"
+						  th:text="${theExcepcionJSONHere.vInformeExcepcion}" >
+	   			</textarea>
+			</div>
+
+	    
+
+	        	
+            <table 
+	        	th:if="${theExcepcionJSONHere.vStackTraceElements}" class="cssSpringnut_ExcepcionJSON_table"
+            	th:id="${'did_excepcionJSON_StackTraceElements_table_' + theExcepcionJSONHere.vNestingLevel}">
+            	<thead>
+            		<tr>
+            			<th class="cssSpringnut_ExcepcionJSON_headerCell">Clase Java</th>
+            			<th class="cssSpringnut_ExcepcionJSON_headerCell">Método Java</th>
+            			<th class="cssSpringnut_ExcepcionJSON_headerCell">Es Nativo</th>
+            			<th class="cssSpringnut_ExcepcionJSON_headerCell">Fichero de programa</th>
+            			<th class="cssSpringnut_ExcepcionJSON_headerCell">Nº línea</th>
+            		</tr>
+            	</thead>
+            	<tbody>
+            		<tr th:each="stackTraceElementJSON,iteracionStackTraceElementJSON : ${theExcepcionJSONHere.vStackTraceElements}" >
+            			<td th:id="${'did_excepcionJSON_StackTraceElements_cell_' + theExcepcionJSONHere.vNestingLevel + '_' + iteracionStackTraceElementJSON.index + '_vDeclaringClass'}" 
+            				class="cssSpringnut_ExcepcionJSON_cell" th:text="${stackTraceElementJSON.vDeclaringClass}"></td>
+            			<td th:id="${'did_excepcionJSON_StackTraceElements_cell_' + theExcepcionJSONHere.vNestingLevel + '_' + iteracionStackTraceElementJSON.index + '_vMethodName'}" 
+            				class="cssSpringnut_ExcepcionJSON_cell" th:text="${stackTraceElementJSON.vMethodName}"></td>
+            			<td th:id="${'did_excepcionJSON_StackTraceElements_cell_' + theExcepcionJSONHere.vNestingLevel + '_' + iteracionStackTraceElementJSON.index + '_vIsNativeMethod'}" 
+            				class="cssSpringnut_ExcepcionJSON_cell" th:text="${stackTraceElementJSON.vIsNativeMethod}"></td>
+            			<td th:id="${'did_excepcionJSON_StackTraceElements_cell_' + theExcepcionJSONHere.vNestingLevel + '_' + iteracionStackTraceElementJSON.index + '_vFileName'}" 
+            				class="cssSpringnut_ExcepcionJSON_cell" th:text="${stackTraceElementJSON.vFileName}"></td>
+            			<td th:id="${'did_excepcionJSON_StackTraceElements_cell_' + theExcepcionJSONHere.vNestingLevel + '_' + iteracionStackTraceElementJSON.index + '_vLineNumber'}" 
+            				class="cssSpringnut_ExcepcionJSON_cell" th:text="${stackTraceElementJSON.vLineNumber}"></td>
+            		</tr>
+            	</tbody>
+            </table>            
+	        
+        </div>
+
+
+
+      	<div 
+      		th:if="${theExcepcionJSONHere.vCause}" >
+
+			<br/>
+	      	<hr/>
+      		
+     		<h3 class="cssSpringnut_excepcion_causaanidada">Causa anidada <span th:text="${theExcepcionJSONHere.vCause.vNestingLevel}"></span></h3>
+
+      		<link layout:include="/layouts/excepcion :: excepcion_fragment" th:with="theExcepcionJSONHere=${theExcepcionJSONHere.vCause}" th:remove="tag"></link>   
+  		
+		</div>
+
+
+		<div th:each="causasAplanadaJSON,iteracionCausasAplanadaJSON : ${theExcepcionJSONHere.vCausasAplanadas}" >
+
+			<br/>
+			<hr/>
+      		
+     		<h3 class="cssSpringnut_excepcion_causaanidada">Causa anidada <span th:text="${causasAplanadaJSON.vNestingLevel}"></span></h3>
+
+      		<link layout:include="/layouts/excepcion :: excepcion_fragment" th:with="theExcepcionJSONHere=${causasAplanadaJSON}" th:remove="tag"></link>   
+		</div>
+		
+		<br/>
+		
+	</body>
+
+
+	
+</html>
